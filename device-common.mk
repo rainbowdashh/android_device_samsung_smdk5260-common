@@ -82,6 +82,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
 
+# Camera permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/init.exynos.cam.sh:system/etc/init.exynos.cam.sh
+
 # Wifi
 PRODUCT_PACKAGES += \
     macloader \
