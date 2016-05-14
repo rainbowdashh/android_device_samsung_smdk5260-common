@@ -41,12 +41,14 @@ PRODUCT_PACKAGES += \
 # Media config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_profiles.xml:system/etc/media_profiles.xml \
+    $(LOCAL_PATH)/configs/media/media_codecs.xml:system/etc/media_codecs.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml  \
+
 # Camera
 PRODUCT_PACKAGES += \
-    camera.universal5433
+    camera.universal5260
 
 PRODUCT_PACKAGES += \
     Snap
@@ -79,6 +81,12 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libdmitry
+
+# Idc
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/idc/ft5x06_ts.idc:system/usr/idc/ft5x06_ts.idc \
+    $(LOCAL_PATH)/idc/Synaptics_HID_TouchPad.idc:system/usr/idc/Synaptics_HID_TouchPad.idc \
+    $(LOCAL_PATH)/idc/Synaptics_RMI4_TouchPad_Sensor.idc:system/usr/idc/Synaptics_RMI4_TouchPad_Sensor.idc \
 
 # RIL
 #PRODUCT_PACKAGES += \
