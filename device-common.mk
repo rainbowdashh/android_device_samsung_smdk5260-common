@@ -89,10 +89,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/idc/Synaptics_RMI4_TouchPad_Sensor.idc:system/usr/idc/Synaptics_RMI4_TouchPad_Sensor.idc \
 
 # RIL
-#PRODUCT_PACKAGES += \
-#    libsecril-client \
-#    libsecril-client-sap \
-#    modemloader
+PRODUCT_PACKAGES += \
+    libsecril-client \
+    libsecril-client-sap \
+    modemloader
 
 #PRODUCT_PROPERTY_OVERRIDES += \
 #    ro.telephony.ril_class=Exynos5260RIL
