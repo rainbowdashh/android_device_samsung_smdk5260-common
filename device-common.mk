@@ -97,6 +97,31 @@ PRODUCT_PACKAGES += \
 #PRODUCT_PROPERTY_OVERRIDES += \
 #    ro.telephony.ril_class=Exynos5260RIL
 
+# Default.prop overrides to get adb working at boot   
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    	ro.secure=0 \
+    	ro.adb.secure=0 \
+	ro.hardware=universal5260 \
+	ro.zygote=zygote32 \
+    	persist.service.adb.enable=1 \
+	persist.service.debuggable=1 \
+	persist.sys.usb.config=mtp,adb \
+	persist.security.ams.enforcing=0 \
+	ro.allow.mock.location=0 \
+	persist.sys.strict_op_enable=false \
+	ro.securestorage.support=false \
+	androidboot.selinux=0 \
+	ro.security.mdpp.ux=Disabled \
+	security.mdpp=None \
+	security.mdpp.result=None \
+	ro.config.tima=0 \
+	ro.build.selinux=1 \
+	ro.config.knox=0 \
+	ro.securestorage.knox=false \
+	security.knox_kap_mode=false \
+	selinux.reload_policy=0 \
+	persist.security.mdm.policy=0 \
+
 # GPU
 PRODUCT_PACKAGES += \
     gralloc.exynos5 \
