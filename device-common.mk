@@ -84,10 +84,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
 
-# samsung symbols 
-PRODUCT_PACKAGES += \
-    libsamsung_symbols
-
 # needed by open-source audio-hal
 PRODUCT_PACKAGES += \
     mixer_paths.xml
@@ -115,9 +111,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/configs/gps/gps.conf:system/etc/gps.conf \
    $(LOCAL_PATH)/configs/gps/gps.xml:system/etc/gps.xml
-
-PRODUCT_PACKAGES += \
-    libdmitry
 
 # Idc
 PRODUCT_COPY_FILES += \
