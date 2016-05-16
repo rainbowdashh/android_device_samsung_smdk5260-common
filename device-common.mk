@@ -184,7 +184,8 @@ PRODUCT_PACKAGES += \
 
 # Service mode
 PRODUCT_PACKAGES += \
-    SamsungServiceMode
+    SamsungServiceMode \
+    SamsungDoze \
 
 # Charger
 PRODUCT_PACKAGES += \
