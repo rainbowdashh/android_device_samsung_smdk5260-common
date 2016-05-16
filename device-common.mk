@@ -36,7 +36,10 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.primary.default \
     libaudio-resampler \
-    audio.primary.universal5260 \
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    af.fast_track_multiplier=1 \
+    audio_hal.force_wideband=true
 
 # Media config
 PRODUCT_COPY_FILES += \
@@ -45,6 +48,31 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml  \
+
+# Audio codecs
+PRODUCT_PACKAGES += \
+    libOMX.Exynos.AAC.Decoder \
+    libOMX.Exynos.FLAC.Decoder \
+    libOMX.Exynos.MP3.Decoder \
+    libOMX.Exynos.WMA.Encoder
+
+# Seiren hardware audio decoder
+PRODUCT_PACKAGES += \
+    libseirenhw
+
+# Stagefright and device specific modules
+PRODUCT_PACKAGES += \
+    libstagefrighthw \
+    libExynosOMX_Core
+
+# Video codecs
+PRODUCT_PACKAGES += \
+    libOMX.Exynos.AVC.Decoder \
+    libOMX.Exynos.HEVC.Decoder \
+    libOMX.Exynos.MPEG4.Decoder \
+    libOMX.Exynos.MPEG4.Encoder \
+    libOMX.Exynos.VP8.Decoder \
+    libOMX.Exynos.WMV.Decoder
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -66,9 +94,18 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    dhcpcd.conf \
+    macloader \
     hostapd \
+    libwpa_client \
     wpa_supplicant
+
+# hardware/broadcom/wlan/bcmdhd/config/Android.mk
+PRODUCT_PACKAGES += \
+    dhcpcd.conf
+
+# external/wpa_supplicant_8/wpa_supplicant/wpa_supplicant_conf.mk
+PRODUCT_PACKAGES += \
+    wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
@@ -93,6 +130,10 @@ PRODUCT_PACKAGES += \
     libsecril-client \
     libsecril-client-sap \
     modemloader
+
+# Mobicore
+PRODUCT_PACKAGES += \
+    mcDriverDaemon
 
 #PRODUCT_PROPERTY_OVERRIDES += \
 #    ro.telephony.ril_class=Exynos5260RIL
@@ -121,14 +162,12 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 	security.knox_kap_mode=false \
 	selinux.reload_policy=0 \
 	persist.security.mdm.policy=0 \
-
 # GPU
 PRODUCT_PACKAGES += \
     gralloc.exynos5 \
     libion \
     hwcomposer.exynos5 \
     memtrack.exynos5 \
-    libfimg \
     libstlport \
 
 PRODUCT_PROPERTY_OVERRIDES += \
