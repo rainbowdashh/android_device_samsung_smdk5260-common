@@ -75,7 +75,7 @@ BOARD_RECOVERY_SWIPE := true
 # GPU
 USE_OPENGL_RENDERER := true
 BOARD_EGL_CFG := device/samsung/smdk5260-common/egl/egl.cfg
-#OVERRIDE_RS_DRIVER := libRSDriverArm.so
+OVERRIDE_RS_DRIVER := libRSDriverArm.so
 
 # frameworks/native/services/surfaceflinger
 # Android keeps 2 surface buffers at all time in case the hwcomposer
@@ -145,6 +145,9 @@ ENABLE_WEBGL := true
 
 # WFD
 BOARD_USES_WFD := true
+
+# Wifi Macloader
+BOARD_HAVE_SAMSUNG_WIFI := true
 
 # Wifi
 BOARD_WLAN_DEVICE                := bcmdhd
