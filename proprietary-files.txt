@@ -67,6 +67,10 @@ vendor/lib/libwvm.so
 ### RIL
 lib/libsecnativefeature.so
 lib/libsec-ril.so
+bin/ddexe
+bin/smdexe
+bin/connfwexe
+bin/mlexe
 
 ### IR
 lib/hw/consumerir.default.so
