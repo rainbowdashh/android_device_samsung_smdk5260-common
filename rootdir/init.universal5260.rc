@@ -848,11 +848,6 @@ service SMD-daemon /system/bin/smdexe
     user root
     group system radio inet net_raw
 
-service DTT-daemon /system/bin/dttexe
-    class main
-    user root
-    group system radio inet net_raw
-
 service BCS-daemon /system/bin/connfwexe
     class main
     user root
