@@ -1,6 +1,7 @@
 # Bluetooth
 vendor/firmware/bcm4335_V0105.0540.hcd
 vendor/firmware/bcm4335_V0105.0540_wisol.hcd
+lib/libbt-vendor.so
 
 ### Wifi
 etc/wifi/bcmdhd_apsta.bin
@@ -23,7 +24,6 @@ vendor/firmware/mfc_fw.bin
 
 ### Camera
 lib/hw/camera.universal5260.so
-lib/libexynoscamera.so
 lib/libhwjpeg.so
 lib/libvdis.so
 vendor/firmware/setfile_6b2.bin
@@ -40,6 +40,10 @@ bin/immvibed
 ### HWC
 vendor/lib/libmalicore.bc
 vendor/lib/egl/libGLES_mali.so
+
+### RSD
+lib/libRSCpuRef.so
+lib/libRSDriver.so
 vendor/lib/libRSDriverArm.so
 
 ### OMX
@@ -47,6 +51,7 @@ lib/omx/libOMX.Exynos.AVC.Encoder.so
 
 ### Sensors
 lib/hw/sensors.universal5260.so
+lib/libinvensense_hal.so
 
 ### Sensorhub
 app/SmartClipServiceHLMR/lib/arm/libgnustl_shared.so
