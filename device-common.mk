@@ -76,7 +76,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.universal5260
+    camera.universal5260 \
     libexynoscamera
 
 PRODUCT_PACKAGES += \
