@@ -20,7 +20,6 @@ PRODUCT_AAPT_PREBUILT_DPI := xhdpi hdpi
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/fstab.universal5260:root/fstab.universal5260 \
     $(LOCAL_PATH)/rootdir/init.wifi.rc:root/init.wifi.rc \
     $(LOCAL_PATH)/rootdir/init.universal5260.rc:root/init.universal5260.rc \
     $(LOCAL_PATH)/rootdir/init.universal5260.usb.rc:root/init.universal5260.usb.rc \
