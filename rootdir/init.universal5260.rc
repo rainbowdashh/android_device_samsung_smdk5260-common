@@ -1,5 +1,6 @@
 import init.universal5260.usb.rc
 import init.wifi.rc
+import init.rilcommon.rc
 
 on early-init
     mkdir /efs 0771 radio system
