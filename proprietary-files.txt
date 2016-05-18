@@ -42,8 +42,6 @@ vendor/lib/libmalicore.bc
 vendor/lib/egl/libGLES_mali.so
 
 ### RSD
-lib/libRSCpuRef.so
-lib/libRSDriver.so
 vendor/lib/libRSDriverArm.so
 
 ### OMX
