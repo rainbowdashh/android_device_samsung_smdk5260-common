@@ -71,6 +71,7 @@ bin/ddexe
 bin/smdexe
 bin/connfwexe
 bin/mlexe
+bin/at_distributor
 
 ### IR
 lib/hw/consumerir.default.so
