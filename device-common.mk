@@ -34,6 +34,7 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     audio.r_submix.default \
     audio.primary.default \
+    audio.primary.universal5260 \
     libaudio-resampler \
 
 PRODUCT_PROPERTY_OVERRIDES += \
