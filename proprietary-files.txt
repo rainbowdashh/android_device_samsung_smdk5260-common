@@ -50,6 +50,9 @@ lib/omx/libOMX.Exynos.AVC.Encoder.so
 ### Sensors
 lib/hw/sensors.universal5260.so
 lib/libinvensense_hal.so
+lib/libmllite.so
+lib/libmplmpu.so
+lib/libak09911c.so
 
 ### Sensorhub
 app/SmartClipServiceHLMR/lib/arm/libgnustl_shared.so
