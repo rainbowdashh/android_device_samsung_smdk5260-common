@@ -36,7 +36,7 @@
 #include <hardware/hardware.h>
 
 #include <linux/videodev2.h>
-#include <linux/videodev2_exynos_media.h>
+#include "videodev2_exynos_media.h"
 
 #include <system/audio.h>
 
