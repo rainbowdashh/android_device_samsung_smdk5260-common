@@ -69,7 +69,6 @@ vendor/lib/libwvm.so
 
 ### RIL
 lib/libsecnativefeature.so
-lib/libsec-ril.so
 bin/ddexe
 bin/smdexe
 bin/connfwexe
@@ -91,7 +90,6 @@ lib/lib_Samsung_Resampler.so
 lib/lib_Samsung_AudioZoom_v102.so
 lib/lib_DNSe_EP_ver216c.so
 lib/lib_DNSe_NRSS_ver226.so
-lib/libsecril-client.so
 lib/libymc_config.so
 lib/libymc_codecctrl.so
 etc/ymc/param/aec_adc.dat
