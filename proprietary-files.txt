@@ -23,7 +23,8 @@ vendor/firmware/fimc_is_fw2.bin
 vendor/firmware/mfc_fw.bin
 
 ### Camera
-#lib/hw/camera.universal5260.so
+lib/hw/camera.universal5260.so
+lib/libexynoscamera.so
 lib/libhwjpeg.so
 lib/libvdis.so
 cameradata/datapattern_420sp.yuv
