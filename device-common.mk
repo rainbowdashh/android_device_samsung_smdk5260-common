@@ -37,7 +37,6 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     audio.r_submix.default \
     audio.primary.default \
-    audio.primary.universal5260 \
     libaudio-resampler \
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -59,10 +58,6 @@ PRODUCT_PACKAGES += \
     libOMX.Exynos.MP3.Decoder \
     libOMX.Exynos.WMA.Encoder
 
-# Seiren hardware audio decoder
-PRODUCT_PACKAGES += \
-    libseirenhw
-
 # Stagefright and device specific modules
 PRODUCT_PACKAGES += \
     libstagefrighthw \
@@ -78,10 +73,6 @@ PRODUCT_PACKAGES += \
     libOMX.Exynos.WMV.Decoder
 
 # Camera
-PRODUCT_PACKAGES += \
-    camera.universal5260 \
-    libexynoscamera
-
 PRODUCT_PACKAGES += \
     Snap
 
@@ -169,10 +160,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.text_large_cache_width=2048 \
     ro.hwui.text_large_cache_height=1024 \
     ro.hwui.fbo_cache_size=8 \
-
-# Power
-PRODUCT_PACKAGES += \
-    power.universal5260
 
 # Lights
 PRODUCT_PACKAGES += \
