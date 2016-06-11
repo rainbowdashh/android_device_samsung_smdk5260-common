@@ -1,21 +1,3 @@
-# Bluetooth
-vendor/firmware/bcm4335_V0105.0540.hcd
-vendor/firmware/bcm4335_V0105.0540_wisol.hcd
-lib/libbt-vendor.so
-
-### Wifi
-etc/wifi/bcmdhd_apsta.bin
-etc/wifi/bcmdhd_ibss.bin
-etc/wifi/bcmdhd_mfg.bin
-etc/wifi/bcmdhd_sta.bin
-etc/wifi/cred.conf
-etc/wifi/nvram_mfg.txt
-etc/wifi/nvram_net.txt
-
-# NFC
-lib/hw/nfc_nci.universal5260.so
-vendor/firmware/sec_s3fnrn3_firmware.bin
-
 ### Media
 # Image subsystem
 vendor/firmware/fimc_is_fw2.bin
@@ -377,9 +359,6 @@ etc/ymc/param/aec_sidetone.dat
 etc/ymc/param/aec_sidetone_vol_nb.dat
 etc/ymc/param/aec_sidetone_vol_wb.dat
 etc/ymc/param/aec_sp_dac1.dat
-
-### IR
-lib/hw/consumerir.default.so
 
 # MobiCore
 app/FFFFFFFF000000000000000000000001.drbin
