@@ -1,7 +1,7 @@
 #!/bin/sh
 
 VENDOR=samsung
-DEVICE=smdk5260
+DEVICE=smdk5260-common
 
 set -e
 

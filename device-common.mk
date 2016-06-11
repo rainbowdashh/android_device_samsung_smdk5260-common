@@ -2,7 +2,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Samsung vendor
-$(call inherit-product-if-exists, vendor/samsung/smdk5260/smdk5260-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/smdk5260/smdk5260-common-vendor.mk)
 
 # Dalvik VM specific for devices with 2048 MB of RAM
 $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
