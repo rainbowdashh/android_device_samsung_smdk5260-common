@@ -24,6 +24,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.universal5260.rc:root/init.universal5260.rc \
     $(LOCAL_PATH)/rootdir/init.universal5260.usb.rc:root/init.universal5260.usb.rc \
     $(LOCAL_PATH)/rootdir/ueventd.universal5260.rc:root/ueventd.universal5260.rc \
+    $(LOCAL_PATH)/rootdir/fstab.universal5260:root/fstab.universal5260 \
 
 # Audio
 PRODUCT_COPY_FILES += \
