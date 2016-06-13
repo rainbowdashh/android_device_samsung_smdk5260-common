@@ -132,7 +132,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Mobicore
 PRODUCT_PACKAGES += \
-    mcDriverDaemon
+    mcDriverDaemon \
+    keystore.exynos5 \
 
 # GPU
 PRODUCT_PACKAGES += \
