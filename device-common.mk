@@ -75,8 +75,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap \
-    camera.exynos5 \
+    Snap
 
 PRODUCT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
