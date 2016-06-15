@@ -22,6 +22,9 @@ lib/libwrappergps.so
 # VibeTonz
 bin/immvibed
 
+# Power
+lib/hw/power.exynos5.so
+
 ### HWC
 vendor/lib/libmalicore.bc
 vendor/lib/egl/libGLES_mali.so
@@ -38,6 +41,8 @@ lib/libinvensense_hal.so
 lib/libmllite.so
 lib/libmplmpu.so
 lib/libak09911c.so
+etc/PDC.ini
+etc/PARAM.ini
 
 ### Sensorhub
 app/SmartClipServiceHLMR/lib/arm/libgnustl_shared.so
