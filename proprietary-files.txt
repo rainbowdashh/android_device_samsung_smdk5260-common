@@ -13,6 +13,16 @@ cameradata/datapattern_420sp.yuv
 cameradata/datapattern_front_420sp.yuv
 vendor/firmware/setfile_6b2.bin
 vendor/firmware/setfile_imx175.bin
+lib/libarcsoft_picaction.so
+lib/libarcsoft_sensorndk.so
+lib/libarcsoft_night_shot_ex.so
+lib/libarcsoft_picaction_manual.so
+lib/libarcsoft_selfie_camera_lite.so
+lib/libarcsoft_panorama_burstcapture.so
+lib/libarccamera.so
+lib/libseccamera_jni.so
+lib/libseccameracore.so
+lib/libsecnativefeature.so
 
 # GPS
 bin/gpsd
