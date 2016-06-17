@@ -19,9 +19,6 @@ TARGET_SOC := exynos5260
 # RENDERSCRIPT
 BOARD_OVERRIDE_RS_CPU_VARIANT_32 := cortex-a15
 
-# LibVideoCodec
-COMMON_GLOBAL_CFLAGS += -DSOC_EXYNOS5430
-
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/smdk5260-common/include
 
