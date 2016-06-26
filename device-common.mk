@@ -75,7 +75,8 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Camera2
+    Camera2 \
+    libhwjpeg 
 
 PRODUCT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
