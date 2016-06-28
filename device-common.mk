@@ -179,7 +179,6 @@ PRODUCT_PACKAGES += \
 # Service mode
 PRODUCT_PACKAGES += \
     SamsungServiceMode \
-    SamsungDoze \
     Torch \
 
 # Charger
@@ -192,6 +191,11 @@ PRODUCT_PACKAGES += \
     setup_fs \
     make_ext4fs \
     e2fsck 
+
+# Symbols for blobs
+PRODUCT_PACKAGES += \
+    libsamsung_symbols \
+    libdmitry 
 
 # PERMISSONS
 PRODUCT_COPY_FILES += \
