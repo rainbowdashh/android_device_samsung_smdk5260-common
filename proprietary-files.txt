@@ -9,8 +9,6 @@ lib/hw/camera.universal5260.so
 lib/libexynoscamera.so
 #lib/libhwjpeg.so
 lib/libvdis.so
-cameradata/datapattern_420sp.yuv
-cameradata/datapattern_front_420sp.yuv
 vendor/firmware/setfile_6b2.bin
 vendor/firmware/setfile_imx175.bin
 #lib/libarcsoft_picaction.so
@@ -22,7 +20,6 @@ vendor/firmware/setfile_imx175.bin
 #lib/libarccamera.so
 #lib/libseccamera_jni.so
 #lib/libseccameracore.so
-lib/libsecnativefeature.so
 
 # GPS
 bin/gpsd

@@ -122,12 +122,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libsec-ril.so \
     ro.ril.hsxpa=1 \
     ro.ril.gprsclass=10 \
-    ro.use_data_netmgrd=true \
-    persist.data.netmgrd.qos.enable=false \
-    ro.data.large_tcp_window_size=true \
     telephony.lteOnCdmaDevice=0 \
-    persist.radio.add_power_save=1 \
-    persist.radio.apm_sim_not_pwdn=1 \
     ro.ril.qanelements=5 \
 #    ro.telephony.ril_class=Exynos5260RIL \
 
