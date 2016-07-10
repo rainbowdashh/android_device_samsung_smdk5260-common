@@ -3,3 +3,6 @@
 *.h~
 *.xml~
 *.txt~
+*.cpp~
+*.sh~
+*.java~
