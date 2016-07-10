@@ -125,7 +125,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.gprsclass=10 \
     telephony.lteOnCdmaDevice=0 \
     ro.ril.qanelements=5 \
-#    ro.telephony.ril_class=Exynos5260RIL \
+    ro.telephony.ril_class=ExynosXMM6360RIL \
 
 # Mobicore
 PRODUCT_PACKAGES += \
