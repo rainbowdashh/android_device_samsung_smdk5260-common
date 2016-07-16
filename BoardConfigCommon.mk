@@ -54,20 +54,6 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 BOARD_RECOVERY_SWIPE := true
 TARGET_RECOVERY_FSTAB := device/samsung/smdk5260-common/rootdir/fstab.universal5260
 
-# TWRP Specific
-#DEVICE_RESOLUTION := 720x1280
-#BOARD_HAS_NO_REAL_SDCARD := true
-#TW_INTERNAL_STORAGE_PATH := "/data/media/0"
-#TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
-#TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-#TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
-#TW_HAS_DOWNLOAD_MODE := true
-#TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
-#TW_MAX_BRIGHTNESS := 255
-#TW_NO_CPU_TEMP := true
-#TW_NO_REBOOT_BOOTLOADER := true
-#TW_EXCLUDE_SUPERSU := true
-
 # GPU
 USE_OPENGL_RENDERER := true
 BOARD_EGL_CFG := device/samsung/smdk5260-common/egl/egl.cfg
