@@ -714,13 +714,6 @@ on property:ro.debuggable=1
     write /sys/module/kgdboc/parameters/kgdboc ttyFIQ1
     write /sys/module/fiq_debugger/parameters/kgdb_enable 1
 
-# Vibetonz
-service immvibed /system/bin/immvibed
-    class core
-    user vibe
-    group vibe
-    oneshot
-
 service mobex-daemon /system/bin/npsmobex
     class main
     user system
@@ -834,17 +827,7 @@ service sdumpstate /system/bin/dumpstate -P
     disabled
     oneshot
 #RIL
-service DR-daemon /system/bin/ddexe
-    class main
-    user root
-    group system radio inet net_raw
-
 service SMD-daemon /system/bin/smdexe
-    class main
-    user root
-    group system radio inet net_raw
-
-service BCS-daemon /system/bin/connfwexe
     class main
     user root
     group system radio inet net_raw
