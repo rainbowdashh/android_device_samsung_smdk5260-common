@@ -410,3 +410,4 @@ media/dock_error.spi
 media/wave_loop.spi
 media/incompatible_charger.spi
 media/battery_temperature_limit.spi
+bin/lpm
