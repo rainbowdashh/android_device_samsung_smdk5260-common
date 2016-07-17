@@ -815,13 +815,6 @@ service TvoutService_C /system/bin/bintvoutservice
 on property:ro.SecEDS.enable=false
     stop TvoutService_C
 
-#Knox VPN
-service ipruleset /system/bin/ipruleset
-    class main
-    group vpn net_admin inet net_raw
-    disabled
-    oneshot
-
 service sdumpstate /system/bin/dumpstate -P
     class main
     disabled
