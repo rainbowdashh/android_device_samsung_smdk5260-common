@@ -807,6 +807,7 @@ on property:ro.bootmode=charger
 service playlpm /system/bin/lpm
     class sec-charger
     user root
+
 # SecEDS
 service TvoutService_C /system/bin/bintvoutservice
      class main
