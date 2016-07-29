@@ -17,8 +17,6 @@ lib/libarcsoft_picaction_manual.so
 lib/libarcsoft_selfie_camera_lite.so
 lib/libarcsoft_panorama_burstcapture.so
 lib/libarccamera.so
-lib/libseccamera_jni.so
-lib/libseccameracore.so
 
 # GPS
 bin/gpsd
