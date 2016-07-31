@@ -774,16 +774,10 @@ service swapon /sbin/sswap -s
     seclabel u:r:sswap:s0
     oneshot
 
-# LPM
-on property:ro.bootmode=charger
-    mount ext4 /dev/block/mmcblk0p18 /system wait ro
-
-on property:ro.bootmode=charger
-    class_start sec-charger
-
-service playlpm /system/bin/lpm
-    class sec-charger
-    user root
+# Charger
+service battery_charger /sbin/healthd -c
+    class charger
+    critical
 
 # SecEDS
 service TvoutService_C /system/bin/bintvoutservice
