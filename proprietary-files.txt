@@ -8,19 +8,15 @@ vendor/firmware/mfc_fw.bin
 lib/hw/camera.universal5260.so:lib/hw/camera.vendor.universal5260.so
 vendor/firmware/setfile_6b2.bin
 vendor/firmware/setfile_imx175.bin
-lib/libarccamera.so
-lib/libarcsoft_night_shot.so
-lib/libarcsoft_nighthawk.so
-lib/libarcsoft_panorama_burstcapture.so
 lib/libarcsoft_picaction.so
+lib/libarcsoft_sensorndk.so
+lib/libarcsoft_night_shot_ex.so
 lib/libarcsoft_picaction_manual.so
 lib/libarcsoft_selfie_camera_lite.so
-lib/libarcsoft_sensorndk.so
-lib/libarcsoft_vdoinvideo.so
+lib/libarcsoft_panorama_burstcapture.so
+lib/libarccamera.so
 lib/libexynoscamera.so
 lib/libvdis.so
-# Camera Other 
-lib/libliveframework.so
 
 # GPS
 bin/gpsd
