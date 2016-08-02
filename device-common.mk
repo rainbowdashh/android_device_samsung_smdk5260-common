@@ -142,6 +142,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/nfcee_access.xml:system/etc/nfcee_access.xml \
     $(LOCAL_PATH)/configs/nfc/libnfc-sec.conf:system/etc/libnfc-sec.conf \
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.nfc.sec_hal=true
+
 # Mobicore
 PRODUCT_PACKAGES += \
     mcDriverDaemon \
