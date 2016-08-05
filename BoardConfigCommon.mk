@@ -54,20 +54,6 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 BOARD_RECOVERY_SWIPE := true
 TARGET_RECOVERY_FSTAB := device/samsung/smdk5260-common/rootdir/fstab.universal5260
 
-# TWRP Specific
-#DEVICE_RESOLUTION := 720x1280
-#BOARD_HAS_NO_REAL_SDCARD := true
-#TW_INTERNAL_STORAGE_PATH := "/data/media/0"
-#TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
-#TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-#TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
-#TW_HAS_DOWNLOAD_MODE := true
-#TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
-#TW_MAX_BRIGHTNESS := 255
-#TW_NO_CPU_TEMP := true
-#TW_NO_REBOOT_BOOTLOADER := true
-#TW_EXCLUDE_SUPERSU := true
-
 # GPU
 USE_OPENGL_RENDERER := true
 BOARD_EGL_CFG := device/samsung/smdk5260-common/egl/egl.cfg
@@ -114,6 +100,10 @@ BOARD_USE_CSC_HW := true
 BOARD_USE_QOS_CTRL := false
 BOARD_USE_VP8ENC_SUPPORT := true
 
+# NFC
+BOARD_HAVE_NFC := true
+BOARD_NFC_HAL_SUFFIX := universal5260
+
 # Camera
 USE_CAMERA_STUB := true
 BOARD_NEEDS_MEMORYHEAPION := true
@@ -122,8 +112,8 @@ COMMON_GLOBAL_CFLAGS += -DSAMSUNG_CAMERA_HARDWARE
 COMMON_GLOBAL_CFLAGS += -DADD_LEGACY_ACQUIRE_BUFFER_SYMBOL
 COMMON_GLOBAL_CFLAGS += -DSAMSUNG_DVFS
 
-# Audio ( to fix symbol error thats all )
-COMMON_GLOBAL_CFLAGS += -DSEC_PRODUCT_FEATURE_RIL_CALL_DUALMODE_CDMAGSM
+# Audio 
+COMMON_GLOBAL_CFLAGS += -DSEC_PRODUCT_FEATURE_RIL_CALL_DUALMODE_CDMAGSM # To fix symbol error thats all
 BOARD_USE_ALP_AUDIO := true
 BOARD_USE_SEIREN_AUDIO := true
 
@@ -134,6 +124,7 @@ BOARD_HARDWARE_CLASS := device/samsung/smdk5260-common/cmhw
 BOARD_VENDOR := samsung
 BOARD_PROVIDES_LIBRIL := true
 BOARD_MOBILEDATA_INTERFACE_NAME := "rmnet0"
+BOARD_RIL_CLASS := ../../../device/samsung/smdk5260-common/ril
 
 # Sensors
 TARGET_NO_SENSOR_PERMISSION_CHECK := true
@@ -168,3 +159,9 @@ TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
+BOARD_CHARGER_SHOW_PERCENTAGE := true
+RED_LED_PATH := "/sys/class/leds/led_r/brightness"
+GREEN_LED_PATH := "/sys/class/leds/led_g/brightness"
+BLUE_LED_PATH := "/sys/class/leds/led_b/brightness"
+BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
+CHARGING_ENABLED_PATH := "/sys/class/power_supply/battery/batt_lp_charging"

@@ -5,24 +5,22 @@ vendor/firmware/fimc_is_fw2.bin
 vendor/firmware/mfc_fw.bin
 
 ### Camera
-lib/hw/camera.universal5260.so
-lib/libexynoscamera.so
-#lib/libhwjpeg.so
-lib/libvdis.so
-cameradata/datapattern_420sp.yuv
-cameradata/datapattern_front_420sp.yuv
+lib/hw/camera.universal5260.so:lib/hw/camera.vendor.universal5260.so
 vendor/firmware/setfile_6b2.bin
 vendor/firmware/setfile_imx175.bin
-#lib/libarcsoft_picaction.so
-#lib/libarcsoft_sensorndk.so
-#lib/libarcsoft_night_shot_ex.so
-#lib/libarcsoft_picaction_manual.so
-#lib/libarcsoft_selfie_camera_lite.so
-#lib/libarcsoft_panorama_burstcapture.so
-#lib/libarccamera.so
-#lib/libseccamera_jni.so
-#lib/libseccameracore.so
-lib/libsecnativefeature.so
+lib/libarccamera.so
+lib/libarcgif.so
+lib/libarcpicbest.so
+lib/libArcPiClear.so
+lib/libarcsoft_flawlessface.so
+lib/libarcsoft_night_shot.so
+lib/libarcsoft_panorama_burstcapture.so
+lib/libarcsoft_picaction.so
+lib/libarcsoft_picaction_manual.so
+lib/libarcsoft_sensorndk.so
+lib/libarcsoft_skin_soften.so
+lib/libexynoscamera.so
+lib/libvdis.so
 
 # GPS
 bin/gpsd
@@ -397,19 +395,4 @@ app/mcRegistry/ffffffff000000000000000000000013.tlbin
 app/mcRegistry/ffffffffd00000000000000000000004.tlbin
 app/mcRegistry/ffffffffd0000000000000000000000a.tlbin
 app/mcRegistry/fffffffff0000000000000000000001e.tlbin
-
-# Battery
-media/wireless_left.spi
-media/wireless_right.spi
-media/battery_cover.spi
-media/battery_error.spi
-media/particle_intro.spi
-media/particle_loop.spi
-media/lcd_density.txt
-media/percentage.spi
-media/battery_temperature_error.spi
-media/battery_low.spi
-media/dock_error.spi
-media/wave_loop.spi
-media/incompatible_charger.spi
-media/battery_temperature_limit.spi
+bin/scranton_RD
