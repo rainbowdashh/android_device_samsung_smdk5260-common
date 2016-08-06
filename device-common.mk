@@ -128,7 +128,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.hsxpa=1 \
     ro.ril.gprsclass=10 \
     telephony.lteOnCdmaDevice=0 \
-    ro.telephony.ril_class=ExynosXMM6360RIL \
+#    ro.telephony.ril_class=ExynosXMM6360RIL \
 
 # NFC
 PRODUCT_PACKAGES += \
