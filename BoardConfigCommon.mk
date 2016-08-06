@@ -25,6 +25,9 @@ TARGET_SPECIFIC_HEADER_PATH := device/samsung/smdk5260-common/include
 # PowerHAL
 TARGET_POWERHAL_VARIANT := samsung
 
+# LightHAl
+TARGET_PROVIDES_HW_LIBLIGHT := true
+
 # Kernel
 BOARD_KERNEL_CMDLINE := 
 BOARD_KERNEL_BASE := 0x10000000
