@@ -67,6 +67,9 @@ NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 
 # Exynos display
 BOARD_USES_VIRTUAL_DISPLAY := true
+# Force the screenshot path to CPU consumer (fix glitches & camera)
+# Dont remove this !!!
+COMMON_GLOBAL_CFLAGS += -DFORCE_SCREENSHOT_CPU_PATH
 
 # HWCServices
 BOARD_USES_HWC_SERVICES := true
