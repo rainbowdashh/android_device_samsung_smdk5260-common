@@ -76,6 +76,9 @@ on post-fs-data
 
 on boot
 
+# cmdline 
+    chmod 0644 /proc/cmdline
+
 # SSWAP
     write /proc/sys/vm/swappiness 130
 
