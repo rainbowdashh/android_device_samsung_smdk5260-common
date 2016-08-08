@@ -21,6 +21,7 @@ lib/libarcsoft_sensorndk.so
 lib/libarcsoft_skin_soften.so
 lib/libexynoscamera.so
 lib/libvdis.so
+lib/libhwjpeg.so
 
 # GPS
 bin/gpsd

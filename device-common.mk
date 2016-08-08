@@ -76,7 +76,6 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     Camera2 \
-    libhwjpeg \
     camera.universal5260
 
 PRODUCT_PROPERTY_OVERRIDES += \
