@@ -14,9 +14,6 @@ on init
  # Support legacy paths
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
-    symlink /sdcard1 /storage/sdcard1
-    symlink /sdcard1 /mnt/extSdCard
-    symlink /sdcard1 /external_sd
 
     symlink /dev/block/mmcblk0p13 /dev/mbin0
     restorecon /dev/mbin0
@@ -525,7 +522,6 @@ on boot
 
 on fs
     mount_all /fstab.universal5260
-    setprop ro.crypto.fuse_sdcard true
 
 #For Absolute Persistence Partition 
     mkdir /persdata 0755 system system 
