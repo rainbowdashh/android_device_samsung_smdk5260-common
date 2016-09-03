@@ -453,24 +453,6 @@ on boot
 # MHL factory test
     chown system radio /sys/class/mhl/mhl_on
 
-###############################################################################
-# System LSI
-# Comment : add permission to device driver
-
-# NFC : Permissions for NFC
-    chmod 0660 /dev/sec-nfc
-# NFC : change owner
-    chown nfc nfc /dev/sec-nfc
-# NFC : create data/nfc for nv storage
-    mkdir /data/nfc 0700 nfc nfc
-    mkdir /data/nfc/param 0700 nfc nfc
-
-# Set up nfc test option
-    setprop snfc.test.fwdownload 2
-    setprop snfc.test.power      sec
-    setprop snfc.test.tag        sec
-###############################################################################
-
 # Switch Device
     chown system system /sys/class/sec/switch/force_otgboost
 
