@@ -1,6 +1,5 @@
 import init.universal5260.usb.rc
 import init.wifi.rc
-import init.rilcommon.rc
 import init.target.rc
 
 on early-init
