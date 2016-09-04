@@ -22,14 +22,6 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 320dpi
 PRODUCT_AAPT_PREBUILT_DPI := xhdpi hdpi
 
-# Ramdisk
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/init.wifi.rc:root/init.wifi.rc \
-    $(LOCAL_PATH)/rootdir/init.universal5260.rc:root/init.universal5260.rc \
-    $(LOCAL_PATH)/rootdir/init.universal5260.usb.rc:root/init.universal5260.usb.rc \
-    $(LOCAL_PATH)/rootdir/ueventd.universal5260.rc:root/ueventd.universal5260.rc \
-    $(LOCAL_PATH)/rootdir/fstab.universal5260:root/fstab.universal5260 \
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf \
@@ -44,7 +36,55 @@ PRODUCT_PACKAGES += \
     audio.primary.default \
     libaudio-resampler \
 
-# Media config
+# Camera
+PRODUCT_PACKAGES += \
+    Camera2 \
+    camera.universal5260
+
+# Camera permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/init.exynos.cam.sh:system/etc/init.exynos.cam.sh
+
+# Charger
+PRODUCT_PACKAGES += \
+    charger \
+    charger_res_images
+
+# Filesystem
+PRODUCT_PACKAGES += \
+    setup_fs \
+    make_ext4fs \
+    e2fsck 
+
+# GPU
+PRODUCT_PACKAGES += \
+    gralloc.exynos5 \
+    libion \
+    hwcomposer.exynos5 \
+    memtrack.exynos5 \
+    libstlport \
+
+# Gps
+PRODUCT_COPY_FILES += \
+   $(LOCAL_PATH)/configs/gps/gps.conf:system/etc/gps.conf \
+   $(LOCAL_PATH)/configs/gps/gps.xml:system/etc/gps.xml
+
+# Idc
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/idc/ft5x06_ts.idc:system/usr/idc/ft5x06_ts.idc \
+    $(LOCAL_PATH)/configs/idc/Synaptics_HID_TouchPad.idc:system/usr/idc/Synaptics_HID_TouchPad.idc \
+    $(LOCAL_PATH)/configs/idc/Synaptics_RMI4_TouchPad_Sensor.idc:system/usr/idc/Synaptics_RMI4_TouchPad_Sensor.idc \
+
+# Lights
+PRODUCT_PACKAGES += \
+    lights.universal5260
+
+# Mobicore
+PRODUCT_PACKAGES += \
+    mcDriverDaemon \
+    keystore.exynos5 \
+
+## OMX
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_profiles.xml:system/etc/media_profiles.xml \
     $(LOCAL_PATH)/configs/media/media_codecs.xml:system/etc/media_codecs.xml \
@@ -73,93 +113,6 @@ PRODUCT_PACKAGES += \
     libOMX.Exynos.VP8.Decoder \
     libOMX.Exynos.WMV.Decoder
 
-# Camera
-PRODUCT_PACKAGES += \
-    Camera2 \
-    camera.universal5260
-
-# Camera permissions
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/init.exynos.cam.sh:system/etc/init.exynos.cam.sh
-
-# Wifi
-PRODUCT_PACKAGES += \
-    macloader \
-    hostapd \
-    libwpa_client \
-    wpa_supplicant
-
-# hardware/broadcom/wlan/bcmdhd/config/Android.mk
-PRODUCT_PACKAGES += \
-    dhcpcd.conf
-
-# external/wpa_supplicant_8/wpa_supplicant/wpa_supplicant_conf.mk
-PRODUCT_PACKAGES += \
-    wpa_supplicant.conf
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
-    $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
-   
-# Gps
-PRODUCT_COPY_FILES += \
-   $(LOCAL_PATH)/configs/gps/gps.conf:system/etc/gps.conf \
-   $(LOCAL_PATH)/configs/gps/gps.xml:system/etc/gps.xml
-
-# Idc
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/idc/ft5x06_ts.idc:system/usr/idc/ft5x06_ts.idc \
-    $(LOCAL_PATH)/configs/idc/Synaptics_HID_TouchPad.idc:system/usr/idc/Synaptics_HID_TouchPad.idc \
-    $(LOCAL_PATH)/configs/idc/Synaptics_RMI4_TouchPad_Sensor.idc:system/usr/idc/Synaptics_RMI4_TouchPad_Sensor.idc \
-
-# RIL
-PRODUCT_PACKAGES += \
-    libsecril-client \
-    libsecril-client-sap \
-    modemloader
-
-# Mobicore
-PRODUCT_PACKAGES += \
-    mcDriverDaemon \
-    keystore.exynos5 \
-
-# GPU
-PRODUCT_PACKAGES += \
-    gralloc.exynos5 \
-    libion \
-    hwcomposer.exynos5 \
-    memtrack.exynos5 \
-    libstlport \
-
-# Lights
-PRODUCT_PACKAGES += \
-    lights.universal5260
-
-# Set default USB interface
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
-
-# USB Accesory
-PRODUCT_PACKAGES += \
-    com.android.future.usb.accessory
-
-# Service mode
-PRODUCT_PACKAGES += \
-    SamsungServiceMode \
-    SamsungDoze \
-    Torch \
-
-# Charger
-PRODUCT_PACKAGES += \
-    charger \
-    charger_res_images
-
-# Filesystem
-PRODUCT_PACKAGES += \
-    setup_fs \
-    make_ext4fs \
-    e2fsck 
-
 # PERMISSONS
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -186,3 +139,53 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.xml:system/etc/permissions/android.software.sip.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
+
+# Ramdisk
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/init.wifi.rc:root/init.wifi.rc \
+    $(LOCAL_PATH)/rootdir/init.universal5260.rc:root/init.universal5260.rc \
+    $(LOCAL_PATH)/rootdir/init.universal5260.usb.rc:root/init.universal5260.usb.rc \
+    $(LOCAL_PATH)/rootdir/ueventd.universal5260.rc:root/ueventd.universal5260.rc \
+    $(LOCAL_PATH)/rootdir/fstab.universal5260:root/fstab.universal5260 \
+
+# RIL
+PRODUCT_PACKAGES += \
+    libsecril-client \
+    libsecril-client-sap \
+    modemloader
+
+# Samsung Packages
+PRODUCT_PACKAGES += \
+    SamsungServiceMode \
+    SamsungDoze \
+
+# Set default USB interface
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp
+
+# Torch
+PRODUCT_PACKAGES += \
+    Torch \
+
+# USB Accesory
+PRODUCT_PACKAGES += \
+    com.android.future.usb.accessory
+
+## WiFi
+PRODUCT_PACKAGES += \
+    macloader \
+    hostapd \
+    libwpa_client \
+    wpa_supplicant
+
+# hardware/broadcom/wlan/bcmdhd/config/Android.mk
+PRODUCT_PACKAGES += \
+    dhcpcd.conf
+
+# external/wpa_supplicant_8/wpa_supplicant/wpa_supplicant_conf.mk
+PRODUCT_PACKAGES += \
+    wpa_supplicant.conf
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
