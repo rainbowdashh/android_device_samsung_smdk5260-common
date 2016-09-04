@@ -22,9 +22,6 @@ BOARD_OVERRIDE_RS_CPU_VARIANT_32 := cortex-a15
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/smdk5260-common/include
 
-# PowerHAL
-TARGET_POWERHAL_VARIANT := samsung
-
 # LightHAl
 TARGET_PROVIDES_HW_LIBLIGHT := true
 
@@ -71,15 +68,13 @@ NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 
 # Exynos display
 BOARD_USES_VIRTUAL_DISPLAY := true
+
 # Force the screenshot path to CPU consumer (fix glitches & camera)
 # Dont remove this !!!
 COMMON_GLOBAL_CFLAGS += -DFORCE_SCREENSHOT_CPU_PATH
 
 # HWCServices
 BOARD_USES_HWC_SERVICES := true
-
-# HDMI
-BOARD_USES_OLD_HDMI := true
 
 # FIMG2D
 BOARD_USES_SKIA_FIMGAPI := true
@@ -108,7 +103,6 @@ BOARD_USE_QOS_CTRL := false
 BOARD_USE_VP8ENC_SUPPORT := true
 
 # Camera
-USE_CAMERA_STUB := true
 BOARD_NEEDS_MEMORYHEAPION := true
 COMMON_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
 COMMON_GLOBAL_CFLAGS += -DSAMSUNG_CAMERA_HARDWARE
