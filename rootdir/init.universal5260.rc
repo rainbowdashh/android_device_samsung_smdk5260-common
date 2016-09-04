@@ -816,6 +816,12 @@ service BCS-daemon /system/bin/connfwexe
     user root
     group system radio inet net_raw
 
+# AT Distributor for factory test
+service at_distributor /system/bin/at_distributor
+    class main
+    user root
+    group radio log
+
 # Modem Logging daemon
 service ML-daemon /system/bin/mlexe
     class main
