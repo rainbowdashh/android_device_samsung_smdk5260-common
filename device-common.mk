@@ -11,6 +11,10 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-dalvi
 $(call inherit-product, hardware/samsung_slsi-cm/exynos5/exynos5.mk)
 $(call inherit-product, hardware/samsung_slsi-cm/exynos5260/exynos5260.mk)
 
+# Include props
+-include $(LOCAL_PATH)/system_prop.mk
+
+# Overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/smdk5260-common/overlay
 
 # Device uses high-density artwork where available
@@ -39,10 +43,6 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.primary.default \
     libaudio-resampler \
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    af.fast_track_multiplier=1 \
-    audio_hal.force_wideband=true
 
 # Media config
 PRODUCT_COPY_FILES += \
@@ -77,9 +77,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Camera2 \
     camera.universal5260
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    camera2.portability.force_api=1
 
 # Camera permissions
 PRODUCT_COPY_FILES += \
@@ -121,14 +118,6 @@ PRODUCT_PACKAGES += \
     libsecril-client-sap \
     modemloader
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libargs=-d /dev/ttyS0 \
-    rild.libpath=/system/lib/libsec-ril.so \
-    ro.ril.hsxpa=1 \
-    ro.ril.gprsclass=10 \
-    telephony.lteOnCdmaDevice=0 \
-    ro.telephony.ril_class=ExynosXMM6360RIL \
-
 # Mobicore
 PRODUCT_PACKAGES += \
     mcDriverDaemon \
@@ -141,26 +130,6 @@ PRODUCT_PACKAGES += \
     hwcomposer.exynos5 \
     memtrack.exynos5 \
     libstlport \
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.bq.gpu_to_cpu_unsupported=1 \
-    ro.opengles.version=196608 \
-    ro.sf.lcd_density=320 \
-
-# HWUI
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hwui.texture_cache_size=24 \
-    ro.hwui.layer_cache_size=16 \
-    ro.hwui.path_cache_size=4 \
-    ro.hwui.shape_cache_size=1 \
-    ro.hwui.gradient_cache_size=0.5 \
-    ro.hwui.drop_shadow_cache_size=2 \
-    ro.hwui.r_buffer_cache_size=2 \
-    ro.hwui.text_small_cache_width=1024 \
-    ro.hwui.text_small_cache_height=512 \
-    ro.hwui.text_large_cache_width=2048 \
-    ro.hwui.text_large_cache_height=1024 \
-    ro.hwui.fbo_cache_size=8 \
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -217,18 +186,3 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.xml:system/etc/permissions/android.software.sip.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
-
-# Turn off some JNI
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.kernel.android.checkjni=0 \
-    ro.zygote.disable_gl_preload=true \
-    dalvik.vm.checkjni=false \
-
-# Dalvik
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapstartsize=8m \
-    dalvik.vm.heapgrowthlimit=128m \
-    dalvik.vm.heapsize=512m \
-    dalvik.vm.heaptargetutilization=0.75 \
-    dalvik.vm.heapminfree=2m \
-    dalvik.vm.heapmaxfree=8m \
