@@ -61,6 +61,9 @@ on post-fs-data
 
 on boot
 
+# Ensure all CPUs are online (big cluster)
+  write /sys/devices/system/cpu/cpu4/online 1
+
 # cmdline 
     chmod 0644 /proc/cmdline
 
