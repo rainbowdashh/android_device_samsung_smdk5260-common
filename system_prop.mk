@@ -15,6 +15,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heaptargetutilization=0.75 \
     dalvik.vm.heapminfree=2m \
     dalvik.vm.heapmaxfree=8m \
+    ro.sys.fw.dex2oat_thread_count=4 \
+    dalvik.vm.image-dex2oat-filter=speed \
+    dalvik.vm.dex2oat-filter=speed \
 
 # GPU
 PRODUCT_PROPERTY_OVERRIDES += \
