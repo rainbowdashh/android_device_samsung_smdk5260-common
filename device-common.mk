@@ -19,7 +19,7 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/smdk5260-common/overlay
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := 320dpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
 PRODUCT_AAPT_PREBUILT_DPI := xhdpi hdpi
 
 # Audio
