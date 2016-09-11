@@ -1,77 +1,3 @@
-### Media
-# Image subsystem
-vendor/firmware/fimc_is_fw2.bin
-# S5P Multi Format Codec
-vendor/firmware/mfc_fw.bin
-
-### Camera
-lib/hw/camera.universal5260.so:lib/hw/camera.vendor.universal5260.so
-vendor/firmware/setfile_6b2.bin
-vendor/firmware/setfile_imx175.bin
-lib/libarccamera.so
-lib/libarcgif.so
-lib/libarcpicbest.so
-lib/libArcPiClear.so
-lib/libarcsoft_flawlessface.so
-lib/libarcsoft_night_shot.so
-lib/libarcsoft_panorama_burstcapture.so
-lib/libarcsoft_picaction.so
-lib/libarcsoft_picaction_manual.so
-lib/libarcsoft_sensorndk.so
-lib/libarcsoft_skin_soften.so
-lib/libexynoscamera.so
-lib/libvdis.so
-lib/libhwjpeg.so
-
-# GPS
-bin/gpsd
-lib/hw/gps.default.so
-lib/libwrappergps.so
-
-# VibeTonz
-bin/immvibed
-
-# Power
-lib/hw/power.exynos5.so
-
-### HWC
-vendor/lib/libmalicore.bc
-vendor/lib/egl/libGLES_mali.so
-
-### RSD
-vendor/lib/libRSDriverArm.so
-
-### OMX
-lib/omx/libOMX.Exynos.AVC.Encoder.so
-
-### Sensors
-lib/hw/sensors.universal5260.so
-lib/libinvensense_hal.so
-lib/libmllite.so
-lib/libmplmpu.so
-lib/libak09911c.so
-etc/PDC.ini
-etc/PARAM.ini
-
-### Sensorhub
-app/SmartClipServiceHLMR/lib/arm/libgnustl_shared.so
-
-### Widevine
-lib/liboemcrypto.so
-vendor/lib/mediadrm/libdrmclearkeyplugin.so
-vendor/lib/mediadrm/libwvdrmengine.so
-vendor/lib/libWVStreamControlAPI_L1.so
-vendor/lib/libwvdrm_L1.so
-vendor/lib/libwvm.so
-
-### RIL
-lib/libsecnativefeature.so
-bin/ddexe
-bin/smdexe
-bin/connfwexe
-bin/mlexe
-bin/at_distributor
-
 ### Audio
 lib/hw/audio_policy.universal5260.so
 lib/hw/audio.primary.universal5260.so
@@ -374,6 +300,40 @@ etc/ymc/param/aec_sidetone_vol_nb.dat
 etc/ymc/param/aec_sidetone_vol_wb.dat
 etc/ymc/param/aec_sp_dac1.dat
 
+### Camera
+lib/hw/camera.universal5260.so:lib/hw/camera.vendor.universal5260.so
+vendor/firmware/setfile_6b2.bin
+vendor/firmware/setfile_imx175.bin
+lib/libarccamera.so
+lib/libarcgif.so
+lib/libarcpicbest.so
+lib/libArcPiClear.so
+lib/libarcsoft_flawlessface.so
+lib/libarcsoft_night_shot.so
+lib/libarcsoft_panorama_burstcapture.so
+lib/libarcsoft_picaction.so
+lib/libarcsoft_picaction_manual.so
+lib/libarcsoft_sensorndk.so
+lib/libarcsoft_skin_soften.so
+lib/libexynoscamera.so
+lib/libvdis.so
+lib/libhwjpeg.so
+
+# GPS
+bin/gpsd
+lib/hw/gps.default.so
+lib/libwrappergps.so
+
+### HWC
+vendor/lib/libmalicore.bc
+vendor/lib/egl/libGLES_mali.so
+
+### Media
+# Image subsystem
+vendor/firmware/fimc_is_fw2.bin
+# S5P Multi Format Codec
+vendor/firmware/mfc_fw.bin
+
 # MobiCore
 app/FFFFFFFF000000000000000000000001.drbin
 app/mcRegistry/00060308060501020000000000000000.tlbin
@@ -397,3 +357,43 @@ app/mcRegistry/ffffffffd00000000000000000000004.tlbin
 app/mcRegistry/ffffffffd0000000000000000000000a.tlbin
 app/mcRegistry/fffffffff0000000000000000000001e.tlbin
 bin/scranton_RD
+
+### OMX
+lib/omx/libOMX.Exynos.AVC.Encoder.so
+
+# Power
+lib/hw/power.exynos5.so
+
+### RIL
+lib/libsecnativefeature.so
+bin/ddexe
+bin/smdexe
+bin/connfwexe
+bin/mlexe
+bin/at_distributor
+
+### RSD
+vendor/lib/libRSDriverArm.so
+
+### Sensors
+lib/hw/sensors.universal5260.so
+lib/libinvensense_hal.so
+lib/libmllite.so
+lib/libmplmpu.so
+lib/libak09911c.so
+etc/PDC.ini
+etc/PARAM.ini
+
+### Sensorhub
+app/SmartClipServiceHLMR/lib/arm/libgnustl_shared.so
+
+# VibeTonz
+bin/immvibed
+
+### Widevine
+lib/liboemcrypto.so
+vendor/lib/mediadrm/libdrmclearkeyplugin.so
+vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib/libWVStreamControlAPI_L1.so
+vendor/lib/libwvdrm_L1.so
+vendor/lib/libwvm.so

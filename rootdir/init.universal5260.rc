@@ -1,6 +1,5 @@
 import init.universal5260.usb.rc
 import init.wifi.rc
-import init.rilcommon.rc
 import init.target.rc
 
 on early-init
@@ -769,10 +768,26 @@ service sdumpstate /system/bin/dumpstate -P
     disabled
     oneshot
 #RIL
+service DR-daemon /system/bin/ddexe
+    class main
+    user root
+    group system radio inet net_raw
+
 service SMD-daemon /system/bin/smdexe
     class main
     user root
     group system radio inet net_raw
+
+service BCS-daemon /system/bin/connfwexe
+    class main
+    user root
+    group system radio inet net_raw
+
+# AT Distributor for factory test
+service at_distributor /system/bin/at_distributor
+    class main
+    user root
+    group radio log
 
 # Modem Logging daemon
 service ML-daemon /system/bin/mlexe

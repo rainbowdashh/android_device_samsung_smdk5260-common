@@ -7,14 +7,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
 
-# RIL
+# Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libargs=-d /dev/ttyS0 \
-    rild.libpath=/system/lib/libsec-ril.so \
-    ro.ril.hsxpa=1 \
-    ro.ril.gprsclass=10 \
-    telephony.lteOnCdmaDevice=0 \
-#    ro.telephony.ril_class=ExynosXMM6360RIL \
+    dalvik.vm.heapstartsize=8m \
+    dalvik.vm.heapgrowthlimit=128m \
+    dalvik.vm.heapsize=512m \
+    dalvik.vm.heaptargetutilization=0.75 \
+    dalvik.vm.heapminfree=2m \
+    dalvik.vm.heapmaxfree=8m \
 
 # GPU
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -37,17 +37,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.text_large_cache_height=1024 \
     ro.hwui.fbo_cache_size=8 \
 
+# RIL
+PRODUCT_PROPERTY_OVERRIDES += \
+    rild.libargs=-d /dev/ttyS0 \
+    rild.libpath=/system/lib/libsec-ril.so \
+    ro.ril.hsxpa=1 \
+    ro.ril.gprsclass=10 \
+    telephony.lteOnCdmaDevice=0 \
+    #ro.telephony.ril_class=ExynosXMM6360RIL \
+
 # Turn off some JNI
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.android.checkjni=0 \
     ro.zygote.disable_gl_preload=true \
     dalvik.vm.checkjni=false \
-
-# Dalvik
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapstartsize=8m \
-    dalvik.vm.heapgrowthlimit=128m \
-    dalvik.vm.heapsize=512m \
-    dalvik.vm.heaptargetutilization=0.75 \
-    dalvik.vm.heapminfree=2m \
-    dalvik.vm.heapmaxfree=8m \
