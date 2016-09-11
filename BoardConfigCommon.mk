@@ -81,6 +81,9 @@ OVERRIDE_RS_DRIVER := libRSDriverArm.so
 # HWCServices
 BOARD_USES_HWC_SERVICES := true
 
+# HDMI
+BOARD_USES_OLD_HDMI := true
+
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/smdk5260-common/include
 
