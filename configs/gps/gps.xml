@@ -9,7 +9,7 @@
        NvStorageDir="/data/system/gps/"
        FactoryTestFilePath="/data/"
 
-       LogDirectory="/storage/sdcard0/gps/broadcom/storage"
+       LogDirectory="/storage/emulated/0/gps/broadcom/storage"
 
        WakeLock="geo"
 
