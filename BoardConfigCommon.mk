@@ -76,7 +76,7 @@ BOARD_USES_DT_SHORTNAME := true
 # GPU
 USE_OPENGL_RENDERER := true
 BOARD_EGL_CFG := device/samsung/smdk5260-common/egl/egl.cfg
-OVERRIDE_RS_DRIVER := libRSDriverArm.so
+#OVERRIDE_RS_DRIVER := libRSDriverArm.so
 
 # HWCServices
 BOARD_USES_HWC_SERVICES := true
@@ -135,9 +135,6 @@ BOARD_USE_VP8ENC_SUPPORT := true
 
 # Sensors
 TARGET_NO_SENSOR_PERMISSION_CHECK := true
-
-# RENDERSCRIPT
-BOARD_OVERRIDE_RS_CPU_VARIANT_32 := cortex-a15
 
 # Radio
 BOARD_VENDOR := samsung
