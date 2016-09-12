@@ -83,7 +83,6 @@ PRODUCT_PACKAGES += \
 # Mobicore
 PRODUCT_PACKAGES += \
     mcDriverDaemon \
-    keystore.exynos5 \
 
 ## OMX
 PRODUCT_COPY_FILES += \
