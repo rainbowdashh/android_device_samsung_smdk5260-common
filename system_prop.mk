@@ -26,11 +26,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196608 \
     ro.sf.lcd_density=320 \
 
-# Hardware fstab mount
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.boot.hardware=universal5260 \
-    ro.hardware=universal5260 \
-
 # HWUI
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.texture_cache_size=24 \
