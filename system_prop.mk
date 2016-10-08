@@ -50,10 +50,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     telephony.lteOnCdmaDevice=0 \
     #ro.telephony.ril_class=ExynosXMM6360RIL \
 
-# Storage
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sdcardfs.enable=true
-
 # Turn off some JNI
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.android.checkjni=0 \
