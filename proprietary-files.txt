@@ -321,7 +321,7 @@ lib/libhwjpeg.so
 
 # GPS
 bin/gpsd
-lib/hw/gps.default.so
+lib/hw/gps.default.so:lib/hw/gps.universal5260.so
 lib/libwrappergps.so
 
 ### HWC
@@ -371,9 +371,6 @@ bin/smdexe
 bin/connfwexe
 bin/mlexe
 bin/at_distributor
-
-### RSD
-vendor/lib/libRSDriverArm.so
 
 ### Sensors
 lib/hw/sensors.universal5260.so
