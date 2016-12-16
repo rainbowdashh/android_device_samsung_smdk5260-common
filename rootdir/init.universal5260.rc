@@ -6,6 +6,8 @@ on early-init
     mkdir /efs 0771 radio system
 
 on init
+    export LD_SHIM_LIBS "/system/lib/libexynoscamera.so|libsamsung_symbols.so:/system/lib/omx/libOMX.Exynos.AVC.Encoder.so|libsamsung_symbols.so:/system/bin/gpsd|libdmitry.so"
+
     mkdir /preload 0771 system system
 
  # Support legacy paths

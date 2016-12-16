@@ -163,6 +163,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
 
+# Symbols for blobs
+PRODUCT_PACKAGES += \
+    libsamsung_symbols \
+    libdmitry 
+
 # Torch
 PRODUCT_PACKAGES += \
     Torch \
