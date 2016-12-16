@@ -37,9 +37,9 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
 
 # Camera
-#PRODUCT_PACKAGES += \
-#    Snap \
-#    camera.universal5260
+PRODUCT_PACKAGES += \
+    Snap \
+    camera.universal5260
 
 # Camera permissions
 PRODUCT_COPY_FILES += \
@@ -66,9 +66,9 @@ PRODUCT_PACKAGES += \
     libstlport \
 
 # Gps
-#PRODUCT_COPY_FILES += \
-#   $(LOCAL_PATH)/configs/gps/gps.conf:system/etc/gps.conf \
-#   $(LOCAL_PATH)/configs/gps/gps.xml:system/etc/gps.xml
+PRODUCT_COPY_FILES += \
+   $(LOCAL_PATH)/configs/gps/gps.conf:system/etc/gps.conf \
+   $(LOCAL_PATH)/configs/gps/gps.xml:system/etc/gps.xml
 
 # Idc
 PRODUCT_COPY_FILES += \
