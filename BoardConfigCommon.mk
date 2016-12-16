@@ -118,6 +118,10 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 BOARD_RECOVERY_SWIPE := true
 TARGET_RECOVERY_FSTAB := device/samsung/smdk5260-common/rootdir/fstab.universal5260
 
+# SELinux
+BOARD_SEPOLICY_DIRS := \
+	device/samsung/smdk5260-common/sepolicy
+
 # Samsung LSI OpenMAX
 COMMON_GLOBAL_CFLAGS += -DUSE_NATIVE_SEC_NV12TILED
 
