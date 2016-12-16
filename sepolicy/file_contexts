@@ -59,8 +59,8 @@
 /sys/class/power_supply/battery/music -- u:object_r:sysfs_writable:s0
 /sys/class/devfreq/exynos4270-busfreq-mif(/.*)? -- u:object_r:sysfs_writable:s0
 /sys/class/lcd(/.*)?         -- u:object_r:sysfs_writable:s0
-/sys/devices/platform/bcm4334_bluetooth/rfkill/rfkill0/state -- u:object_r:sysfs_bluetooth_writable:s0
-/sys/devices/platform/bcm4334_bluetooth/rfkill/rfkill0/type -- u:object_r:sysfs_bluetooth_writable:s0
+/sys/devices/platform/bcm4339_bluetooth/rfkill/rfkill0/state -- u:object_r:sysfs_bluetooth_writable:s0
+/sys/devices/platform/bcm4339_bluetooth/rfkill/rfkill0/type -- u:object_r:sysfs_bluetooth_writable:s0
 /sys/devices/platform/s5p-ehci/ehci_power        u:object_r:sysfs_usb_power_writable:s0
 /sys/devices/virtual/misc/multipdp(/.*)     u:object_r:sysfs_multipdp_writable:s0
 
