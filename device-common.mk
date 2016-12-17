@@ -41,10 +41,6 @@ PRODUCT_PACKAGES += \
     Snap \
     camera.universal5260
 
-# Camera permissions
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/init.exynos.cam.sh:system/etc/init.exynos.cam.sh
-
 # Charger
 PRODUCT_PACKAGES += \
     charger \
