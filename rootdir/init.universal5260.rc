@@ -10,10 +10,6 @@ on init
 
     mkdir /preload 0771 system system
 
- # Support legacy paths
-    symlink /sdcard /mnt/sdcard
-    symlink /sdcard /storage/sdcard0
-
     symlink /dev/block/mmcblk0p13 /dev/mbin0
     restorecon /dev/mbin0
     symlink  /sys/devices/platform/s5p-ehci/ehci_power /dev/ehci_power
@@ -25,6 +21,11 @@ on init
 
 # Make param link
     symlink /dev/block/mmcblk0p8 /dev/block/param
+
+on post-fs
+# Support legacy paths
+    symlink /sdcard /mnt/sdcard
+    symlink /sdcard /storage/sdcard0
 
 on post-fs-data
 
