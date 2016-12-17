@@ -1,0 +1,1 @@
+allow shell gps_device:chr_file { read write getattr ioctl };
