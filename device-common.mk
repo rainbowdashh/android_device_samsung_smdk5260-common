@@ -11,9 +11,6 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-dalvi
 $(call inherit-product, hardware/samsung_slsi-cm/exynos5/exynos5.mk)
 $(call inherit-product, hardware/samsung_slsi-cm/exynos5260/exynos5260.mk)
 
-# Include props
--include $(LOCAL_PATH)/system_prop.mk
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/smdk5260-common/overlay
 
