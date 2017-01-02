@@ -15,7 +15,6 @@ allow init sdcardd_exec:file r_file_perms;
 # LD_SHIM_LIBS
 allow init gpsd:process { noatsecure };
 allow init mediaserver:process { noatsecure };
-allow init gps_device:chr_file { ioctl };
 
 allow init debugfs:dir mounton;
 allow init storage_file:lnk_file { read };
