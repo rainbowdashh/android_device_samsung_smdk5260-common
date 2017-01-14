@@ -53,12 +53,6 @@ on post-fs-data
 # YAAS(Yamaha Android Audio System) uses.
     mkdir /data/ymc 0775 system system
 
-# Vibrations
-   chown system system /sys/devices/virtual/timed_output/vibrator/enable
-   chown system system /sys/devices/virtual/timed_output/vibrator/intensity
-   # Default to 90% vibrator strength
-   write /sys/devices/virtual/timed_output/vibrator/intensity 9000
-
 on boot
 
 # cmdline 
