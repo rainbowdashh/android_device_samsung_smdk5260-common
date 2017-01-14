@@ -7,8 +7,6 @@ camera2.portability.force_api=1
 
 # Dalvik
 ro.sys.fw.dex2oat_thread_count=4
-dalvik.vm.image-dex2oat-filter=speed
-dalvik.vm.dex2oat-filter=speed
 
 # GPU
 ro.bq.gpu_to_cpu_unsupported=1
