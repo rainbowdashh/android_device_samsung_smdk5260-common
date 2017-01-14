@@ -626,11 +626,6 @@ on fs
     chmod 0660 /dev/usb_mtp_gadget
     chown system mtp /dev/usb_mtp_gadget
 
-# Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
-service watchdogd /sbin/watchdogd 10 20
-    class core
-    disabled
-
 # GPS
 service gpsd /system/bin/gpsd -c /system/etc/gps.xml
     class main
