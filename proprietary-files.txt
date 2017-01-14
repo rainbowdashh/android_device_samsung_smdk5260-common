@@ -381,9 +381,6 @@ lib/libak09911c.so
 etc/PDC.ini
 etc/PARAM.ini
 
-### Sensorhub
-app/SmartClipServiceHLMR/lib/arm/libgnustl_shared.so
-
 # VibeTonz
 bin/immvibed
 
