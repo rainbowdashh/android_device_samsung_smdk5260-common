@@ -61,17 +61,8 @@ on post-fs-data
 
 on boot
 
-# Ensure all CPUs are online (big cluster)
-  write /sys/devices/system/cpu/cpu4/online 1
-
 # cmdline 
     chmod 0644 /proc/cmdline
-
-# SSWAP
-    write /proc/sys/vm/swappiness 130
-
-    mount debugfs /sys/kernel/debug /sys/kernel/debug
-#    setprop ro.radio.noril yes
 
     # Reduce reserved lowmem from ~48MB to ~12MB
     write /proc/sys/vm/lowmem_reserve_ratio "128 128"
@@ -698,13 +689,6 @@ service secure_storage /system/bin/secure_storage_daemon
     group system
     disabled
 
-on property:ro.securestorage.support=true
-    mkdir /dev/.secure_storage
-    chmod 0711 /dev/.secure_storage
-    chown system system /dev/.secure_storage
-    restorecon -R /dev/.secure_storage
-    start secure_storage
-
 # CS service
 service cs_service /system/bin/cs
     class main
@@ -743,13 +727,6 @@ service iprenew_bt-pan /system/bin/dhcpcd -n
     class late_start
 	disabled
 	oneshot
-	
-# SSWAP
-service swapon /sbin/sswap -s
-    class core
-    user root
-    group root
-    oneshot
 
 # Charger
 service battery_charger /sbin/healthd -c
