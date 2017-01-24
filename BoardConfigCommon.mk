@@ -133,7 +133,7 @@ BOARD_SEPOLICY_DIRS := \
 	device/samsung/smdk5260-common/sepolicy
 
 # Samsung LSI OpenMAX
-BOARD_GLOBAL_CFLAGS += -DUSE_NATIVE_SEC_NV12TILED
+BOARD_USE_SAMSUNG_COLORFORMAT_NV21 := true
 
 # Samsung OpenMAX Video
 BOARD_USE_STOREMETADATA := true
