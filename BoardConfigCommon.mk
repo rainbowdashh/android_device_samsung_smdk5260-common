@@ -97,6 +97,8 @@ BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 TARGET_KERNEL_SOURCE := kernel/samsung/smdk5260
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/smdk5260-common/mkbootimg.mk
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 
 # LightHAl
 TARGET_PROVIDES_HW_LIBLIGHT := true
