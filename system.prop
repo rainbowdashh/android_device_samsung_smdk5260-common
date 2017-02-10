@@ -4,6 +4,8 @@ audio_hal.force_wideband=true
 
 # Camera
 camera2.portability.force_api=1
+media.stagefright.legacyencoder=true
+media.stagefright.less-secure=true
 
 # Dalvik
 ro.sys.fw.dex2oat_thread_count=6
