@@ -77,6 +77,7 @@ BOARD_USES_DT_SHORTNAME := true
 # GPU
 USE_OPENGL_RENDERER := true
 BOARD_EGL_CFG := device/samsung/smdk5260-common/egl/egl.cfg
+TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 #OVERRIDE_RS_DRIVER := libRSDriverArm.so
 
 # HWCServices
