@@ -371,9 +371,6 @@ bin/scranton_RD
 ### OMX
 lib/omx/libOMX.Exynos.AVC.Encoder.so
 
-# Power
-lib/hw/power.exynos5.so
-
 ### RIL
 lib/libsecnativefeature.so
 bin/ddexe
