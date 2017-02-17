@@ -564,11 +564,11 @@ on fs
     chown system system /data/system/gps
 
 # delete gps Factory file
-    rm /data/gps_started
-    rm /data/glonass_started
-    rm /data/beidou_started
-    rm /data/smd_started
-    rm /data/sv_cno.info
+    rm /data/system/gps/gps_started
+    rm /data/system/gps/glonass_started
+    rm /data/system/gps/beidou_started
+    rm /data/system/gps/smd_started
+    rm /data/system/gps/sv_cno.info
 
 # IR_LED
     chown system radio /sys/class/sec/sec_ir/ir_send
