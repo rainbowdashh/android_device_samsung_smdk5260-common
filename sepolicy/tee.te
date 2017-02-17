@@ -1,4 +1,4 @@
-allow tee property_socket:sock_file write;
-unix_socket_connect(tee, property, init)
-allow tee system_prop:property_service set;
-allow tee apk_data_file:dir rw_dir_perms;
+# mobicore
+
+# Allow to create files and directories /data/app/mcRegistry
+file_type_auto_trans(tee, apk_data_file, tee_data_file);
