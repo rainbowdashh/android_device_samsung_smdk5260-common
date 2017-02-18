@@ -156,6 +156,7 @@ BOARD_VENDOR := samsung
 BOARD_PROVIDES_LIBRIL := true
 BOARD_MOBILEDATA_INTERFACE_NAME := "rmnet0"
 #BOARD_RIL_CLASS := ../../../device/samsung/smdk5260-common/ril
+TARGET_IGNORE_RO_BOOT_REVISION := true
 
 # Webkit
 ENABLE_WEBGL := true
