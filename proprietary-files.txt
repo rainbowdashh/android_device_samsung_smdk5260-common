@@ -379,9 +379,6 @@ bin/connfwexe
 bin/mlexe
 bin/at_distributor
 
-### RSD
-vendor/lib/libRSDriverArm.so
-
 ### Sensors
 lib/hw/sensors.universal5260.so
 lib/libinvensense_hal.so
