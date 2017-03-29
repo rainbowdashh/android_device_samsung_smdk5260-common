@@ -29,6 +29,9 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.primary.default \
     libaudio-resampler \
+    libtinyxml \
+    audio.primary.universal5260 \
+    libtinyalsa
 
 # Camera
 PRODUCT_PACKAGES += \
