@@ -35,9 +35,6 @@ PRODUCT_PACKAGES += \
     Snap \
     camera.universal5260
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/init.exynos.cam.sh:system/etc/init.exynos.cam.sh
-
 # Charger
 PRODUCT_PACKAGES += \
     charger \
@@ -64,6 +61,17 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libdmitry
+
+# Init scripts
+PRODUCT_PACKAGES += \
+    init.exynos.cam.sh
+
+PRODUCT_PACKAGES += \
+    fstab.universal5260 \
+    init.universal5260.usb.rc \
+    init.universal5260.rc \
+    init.wifi.rc \
+    ueventd.universal5260.rc
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -137,14 +145,6 @@ PRODUCT_COPY_FILES += \
 # PowerHAL
 PRODUCT_PACKAGES += \
     power.universal5260
-
-# Ramdisk
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/init.wifi.rc:root/init.wifi.rc \
-    $(LOCAL_PATH)/rootdir/init.universal5260.rc:root/init.universal5260.rc \
-    $(LOCAL_PATH)/rootdir/init.universal5260.usb.rc:root/init.universal5260.usb.rc \
-    $(LOCAL_PATH)/rootdir/ueventd.universal5260.rc:root/ueventd.universal5260.rc \
-    $(LOCAL_PATH)/rootdir/fstab.universal5260:root/fstab.universal5260 \
 
 # RIL
 PRODUCT_PACKAGES += \
