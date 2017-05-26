@@ -6,7 +6,6 @@ lib/libsamsungRecord.so
 lib/libsamsungRecord_ns.so
 lib/libsamsungRecord_zoom.so
 lib/libsamsungSoundbooster.so
-lib/libtinyxml.so
 lib/lib_SamsungRec_V04004.so
 lib/lib_Samsung_SB_AM_for_ICS_v04004.so
 lib/lib_Samsung_Resampler.so
