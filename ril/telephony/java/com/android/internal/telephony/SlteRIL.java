@@ -21,7 +21,6 @@ import static com.android.internal.telephony.RILConstants.*;
 
 import android.content.Context;
 import android.telephony.Rlog;
-import android.os.AsyncResult;
 import android.os.Message;
 import android.os.Parcel;
 import android.os.SystemProperties;
@@ -32,7 +31,6 @@ import com.android.internal.telephony.uicc.IccCardApplicationStatus;
 import com.android.internal.telephony.uicc.IccCardStatus;
 import com.android.internal.telephony.uicc.IccRefreshResponse;
 import com.android.internal.telephony.uicc.IccUtils;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -42,6 +40,7 @@ import java.util.Collections;
  * {@hide}
  */
 public class SlteRIL extends RIL {
+
     static final boolean RILJ_LOGD = true;
     static final boolean RILJ_LOGV = true;
 
@@ -49,7 +48,8 @@ public class SlteRIL extends RIL {
      * SAMSUNG RESPONSE
      **********************************************************/
     private static final int RIL_UNSOL_STK_SEND_SMS_RESULT = 11002;
-    private static final int RIL_UNSOL_STK_CALL_CONTROL_RESULT =11003;
+    private static final int RIL_UNSOL_STK_CALL_CONTROL_RESULT = 11003;
+
     private static final int RIL_UNSOL_DEVICE_READY_NOTI = 11008;
     private static final int RIL_UNSOL_AM = 11010;
     private static final int RIL_UNSOL_SIM_PB_READY = 11021;
@@ -146,15 +146,6 @@ public class SlteRIL extends RIL {
         }
     }
 
-    public void setDataAllowed(boolean allowed, Message result) {
-        Rlog.v(RILJ_LOG_TAG, "XMM7260RIL: setDataAllowed");
-
-        if (result != null) {
-            AsyncResult.forMessage(result, 0, null);
-            result.sendToTarget();
-        }
-    }
-
     @Override
     public void
     dial(String address, int clirMode, UUSInfo uusInfo, Message result) {
@@ -246,10 +237,6 @@ public class SlteRIL extends RIL {
             dc.isMT = (0 != p.readInt());
             dc.als = p.readInt();
             dc.isVoice = (0 != p.readInt());
-
-            //int call_type = p.readInt();            // Samsung CallDetails
-            //int call_domain = p.readInt();          // Samsung CallDetails
-            //String csv = p.readString();            // Samsung CallDetails
 
             dc.isVoicePrivacy = (0 != p.readInt());
             dc.number = p.readString();
