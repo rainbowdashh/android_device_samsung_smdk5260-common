@@ -448,7 +448,6 @@ etc/PARAM.ini
 bin/immvibed
 
 ### Widevine from N920C Nougat amr32 system dump
-lib/liboemcrypto.so
 vendor/lib/mediadrm/libwvdrmengine.so|8d8f13b2b20db3fdeeca94fa03063d0bf5597718
 
 # WiFi
