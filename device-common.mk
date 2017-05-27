@@ -96,7 +96,6 @@ PRODUCT_COPY_FILES += \
 # Audio codecs
 PRODUCT_PACKAGES += \
     libOMX.Exynos.AAC.Decoder \
-    libOMX.Exynos.FLAC.Decoder \
     libOMX.Exynos.MP3.Decoder \
     libOMX.Exynos.WMA.Encoder \
     libOMX.Exynos.VP8.Encoder
