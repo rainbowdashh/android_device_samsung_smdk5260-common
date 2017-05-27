@@ -102,9 +102,6 @@ BOARD_CUSTOM_BOOTIMG_MK := device/samsung/smdk5260-common/mkbootimg.mk
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
 KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 
-# LightHAl
-TARGET_PROVIDES_LIBLIGHT := true
-
 # Mixer
 BOARD_USE_BGRA_8888_FB := true
 
