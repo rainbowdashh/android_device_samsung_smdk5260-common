@@ -425,7 +425,7 @@ app/mcRegistry/fffffffff0000000000000000000001e.tlbin
 bin/scranton_RD
 
 ### OMX
-lib/omx/libOMX.Exynos.AVC.Encoder.so
+lib/omx/libOMX.Exynos.AVC.Encoder.so|e04ea39d56fb607e5de4f3f3356f51bcd553f04c
 
 ### RIL
 lib/libsecnativefeature.so
