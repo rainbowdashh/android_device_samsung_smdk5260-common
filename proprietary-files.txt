@@ -447,13 +447,9 @@ etc/PARAM.ini
 # VibeTonz
 bin/immvibed
 
-### Widevine
+### Widevine from N920C Nougat amr32 system dump
 lib/liboemcrypto.so
-vendor/lib/mediadrm/libdrmclearkeyplugin.so
-vendor/lib/mediadrm/libwvdrmengine.so
-vendor/lib/libWVStreamControlAPI_L1.so
-vendor/lib/libwvdrm_L1.so
-vendor/lib/libwvm.so
+vendor/lib/mediadrm/libwvdrmengine.so|8d8f13b2b20db3fdeeca94fa03063d0bf5597718
 
 # WiFi
 etc/wifi/wpa_supplicant_overlay.conf
