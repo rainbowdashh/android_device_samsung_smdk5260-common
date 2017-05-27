@@ -145,6 +145,11 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    libril \
+    librilutils \
+    rild \
+    libxml2 \
+    libprotobuf-cpp-full \
     libsecril-client \
     libsecril-client-sap \
     modemloader
