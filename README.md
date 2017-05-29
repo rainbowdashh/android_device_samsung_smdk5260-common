@@ -15,4 +15,4 @@ Status
 * Camera: No
 
 ## SoC picture
-![Exynos5260] (http://www.notebookcheck.net/uploads/tx_nbc2/Exynos_5_Hexa.jpg "Exynos5260")
+![Exynos5260](http://www.notebookcheck.net/uploads/tx_nbc2/Exynos_5_Hexa.jpg "Exynos5260")
