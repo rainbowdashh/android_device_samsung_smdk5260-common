@@ -24,6 +24,14 @@ on init
 # Make param link
     symlink /dev/block/mmcblk0p8 /dev/block/param
 
+on post-fs
+     # create camera directory
+     mkdir /data/vendor/camera 0770 camera camera
+
+     # camera server uses files under this directory via a kernel module for the FIMC, trying chmod since chown not successful
+     chown cameraserver audio /data/misc/media
+     chmod 0776 /data/misc/media
+
 on post-fs-data
 
     setprop vold.post_fs_data_done 1
@@ -747,13 +755,3 @@ service sdumpstate /system/bin/dumpstate -P
 #    class main
 #    user root
 #    group system radio inet net_raw
-
-# Create camera ID file for Exynos camera HAL
-service camera_id /system/bin/sh /system/etc/init.exynos.cam.sh
-    class main
-    user root
-    disabled
-    oneshot
-
-on property:init.svc.bootanim=stopped
-    start camera_id

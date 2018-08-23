@@ -43,6 +43,10 @@ TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 BOARD_CAMERA_FRONT_ROTATION := 270
 BOARD_CAMERA_BACK_ROTATION := 90
 
+# Camera Shim
+TARGET_LD_SHIM_LIBS += \
+        /system/lib/libexynoscamera.so|libshim_camera.so
+
 # Charger
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
 BOARD_CHARGER_SHOW_PERCENTAGE := true
