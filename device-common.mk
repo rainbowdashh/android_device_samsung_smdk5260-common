@@ -203,7 +203,8 @@ PRODUCT_PACKAGES += \
      android.hardware.radio.deprecated@1.0 \
      libsec-ril_shim
 
-# Set default USB interface
+# set default debugging usb configuration despite it kinda not working
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
      ro.secure=0 \
      ro.adb.secure=0 \
@@ -212,7 +213,12 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
      persist.service.debuggable=1 \
      persist.sys.usb.config=mtp,adb
 
-# Torch
+# Seccomp Filters
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
+    $(COMMON_PATH)/seccomp/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
+
+# Sensors
 PRODUCT_PACKAGES += \
     Torch
 
