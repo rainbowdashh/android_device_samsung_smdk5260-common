@@ -164,9 +164,9 @@ PRODUCT_PACKAGES += \
     modemloader
 
 # Samsung Packages
-PRODUCT_PACKAGES += \
-    SamsungServiceMode \
-    AdvancedDisplay \
+#PRODUCT_PACKAGES += \
+#    SamsungServiceMode \
+#    AdvancedDisplay
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
