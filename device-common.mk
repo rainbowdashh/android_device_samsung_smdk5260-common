@@ -71,9 +71,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
      android.hardware.gnss@1.0-impl
 
-PRODUCT_PACKAGES += \
-    libdmitry
-
 # Init scripts
 PRODUCT_PACKAGES += \
     init.exynos.cam.sh
