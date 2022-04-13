@@ -55,8 +55,8 @@ BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
 CHARGING_ENABLED_PATH := "/sys/class/power_supply/battery/batt_lp_charging"
 
 # CMHW
-BOARD_HARDWARE_CLASS := device/samsung/smdk5260-common/cmhw
-BOARD_HARDWARE_CLASS := hardware/samsung/cmhw
+BOARD_HARDWARE_CLASS := device/samsung/smdk5260-commo/cmhw
+BOARD_HARDWARE_CLASS := hardware/samsung/lineagehw
 
 # Exynos display
 BOARD_USES_VIRTUAL_DISPLAY := true
