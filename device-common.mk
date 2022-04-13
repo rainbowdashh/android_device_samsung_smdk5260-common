@@ -14,6 +14,9 @@ $(call inherit-product, hardware/samsung_slsi-cm/exynos5260/exynos5260.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/smdk5260-common/overlay
 
+# ADB Legacy Interface
+SELINUX_IGNORE_NEVERALLOWS := true
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
