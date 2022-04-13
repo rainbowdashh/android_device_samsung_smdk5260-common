@@ -33,3 +33,9 @@ ro.ril.gprsclass=10
 ro.telephony.ril_class=SlteRIL
 ro.ril.telephony.mqanelements=6
 telephony.lteOnCdmaDevice=0
+
+# Enable ADB Debugging By Default & Disable USB Debugging Popup
+persist.adb.notify=0
+persist.service.adb.enable=1 
+persist.service.debuggable=1
+persist.sys.usb.config=mtp,adb

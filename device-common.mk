@@ -167,7 +167,12 @@ PRODUCT_PACKAGES += \
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
+     ro.secure=0 \
+     ro.adb.secure=0 \
+     ro.debuggable=1 \
+     persist.service.adb.enable=1 \
+     persist.service.debuggable=1 \    
+     persist.sys.usb.config=mtp,adb
 
 # Torch
 PRODUCT_PACKAGES += \
