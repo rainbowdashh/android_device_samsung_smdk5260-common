@@ -30,6 +30,9 @@ on post-fs-data
     chown system system /efs/wifi/.mac.info
     chmod 0664 /efs/wifi/.mac.info
 
+    # Mark wifi driver as unloaded - "ok" indicates loaded
+    setprop wlan.driver.status not_ok
+
 on boot
 	setprop wifi.interface wlan0
 

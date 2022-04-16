@@ -38,7 +38,10 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     libtinyxml \
     audio.primary.universal5260 \
-    libtinyalsa
+    libtinyalsa \
+    tinymix \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -52,13 +55,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     charger \
     charger_res_images \
-    cm_charger_res_images \
+    cm_charger_res_images
 
 # Filesystem
 PRODUCT_PACKAGES += \
     setup_fs \
     make_ext4fs \
-    e2fsck 
+    e2fsck
 
 # GPU
 PRODUCT_PACKAGES += \
@@ -67,6 +70,10 @@ PRODUCT_PACKAGES += \
     hwcomposer.exynos5 \
     memtrack.exynos5 \
     libstlport \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.graphics.composer@2.1-impl
 
 # Gps
 PRODUCT_COPY_FILES += \
@@ -88,16 +95,17 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.universal5260
+    lights.universal5260 \
+    android.hardware.light@2.0-impl
 
 # Mobicore
 PRODUCT_PACKAGES += \
-    mcDriverDaemon \
+    mcDriverDaemon
 
 ## OMX
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs.xml:system/etc/media_codecs.xml \
-    $(LOCAL_PATH)/configs/media/media_profiles.xml:system/etc/media_profiles.xml
+    $(LOCAL_PATH)/configs/media/media_profiles.xml:system/etc/media_profiles.xml \
     $(LOCAL_PATH)/configs/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
@@ -152,7 +160,12 @@ PRODUCT_COPY_FILES += \
 
 # PowerHAL
 PRODUCT_PACKAGES += \
-    power.universal5260
+    power.universal5260 \
+    android.hardware.power@1.0-impl
+
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -181,17 +194,23 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Torch
 PRODUCT_PACKAGES += \
-    Torch \
+    Torch
 
-# USB Accesory
+# Vibrator HAL
 PRODUCT_PACKAGES += \
-    com.android.future.usb.accessory
+    android.hardware.vibrator@1.0-impl
+
+# USB HAL
+PRODUCT_PACKAGES += \
+	android.hardware.usb@1.0-service
 
 ## WiFi
 PRODUCT_PACKAGES += \
     macloader \
     hostapd \
     libwpa_client \
+    android.hardware.wifi@1.0-service \
+    wificond \
     wpa_supplicant
 
 # external/wpa_supplicant_8/wpa_supplicant/wpa_supplicant_conf.mk

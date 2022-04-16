@@ -22,6 +22,7 @@ include $(CLEAR_VARS)
 LOCAL_PRELINK_MODULE := false
 
 LOCAL_SHARED_LIBRARIES := \
+    libexynoscamera \
     libcutils \
     libbinder \
     libhardware \
@@ -83,11 +84,6 @@ LOCAL_SHARED_LIBRARIES := \
     libsensor \
     libutils \
     android.hidl.token@1.0-utils
-
-LOCAL_STATIC_LIBRARIES := \
-    libarect \
-    libbase \
-    libminui
 
 LOCAL_CFLAGS += -DGAIA_FW_BETA
 
