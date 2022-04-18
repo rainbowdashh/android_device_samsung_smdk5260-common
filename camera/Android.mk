@@ -22,7 +22,6 @@ include $(CLEAR_VARS)
 LOCAL_PRELINK_MODULE := false
 
 LOCAL_SHARED_LIBRARIES := \
-    libexynoscamera \
     libcutils \
     libbinder \
     libhardware \
