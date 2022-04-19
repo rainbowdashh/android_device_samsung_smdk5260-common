@@ -14,7 +14,7 @@ $(call inherit-product, hardware/samsung_slsi-cm/exynos5260/exynos5260.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/smdk5260-common/overlay
 
-# ADB Legacy Interface
+# seloonix hax
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Device uses high-density artwork where available
@@ -46,6 +46,13 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.universal5260
+
+# MobiCore setup
+PRODUCT_PACKAGES += \
+    libMcClient \
+    libMcRegistry \
+    libPaApi \
+    libgdmcprov
 
 # HIDL
 PRODUCT_COPY_FILES += \

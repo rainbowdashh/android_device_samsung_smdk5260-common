@@ -654,15 +654,15 @@ service mobex-daemon /system/bin/npsmobex
     group system radio inet sdcard_rw shell
 
 # service for TZPR provisioning version check app
-service scranton_RD /system/bin/scranton_RD
-     class main
-     user root
-     disabled
-     oneshot
+#service scranton_RD /system/bin/scranton_RD
+#     class main
+#     user root
+#     disabled
+#     oneshot
 
 # start for TZPR provisioning version check app
-on property:sys.mobicoredaemon.enable=true
-    start scranton_RD
+#on property:sys.mobicoredaemon.enable=true
+#    start scranton_RD
 
 # MobiCore startup
 service mobicore /system/bin/mcDriverDaemon -r /system/app/FFFFFFFF000000000000000000000001.drbin -r /system/app/mcRegistry/ffffffffd0000000000000000000000a.tlbin
