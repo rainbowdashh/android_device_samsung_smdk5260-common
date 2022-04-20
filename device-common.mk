@@ -54,10 +54,6 @@ PRODUCT_PACKAGES += \
     libPaApi \
     libgdmcprov
 
-# HIDL
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
-
 # Charger
 PRODUCT_PACKAGES += \
     charger \
@@ -78,9 +74,14 @@ PRODUCT_PACKAGES += \
     memtrack.exynos5 \
     libstlport \
     android.hardware.graphics.allocator@2.0-impl \
-    android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.memtrack@1.0-impl \
     android.hardware.graphics.composer@2.1-impl
+
+
+# Keymaster
+ PRODUCT_PACKAGES += \
+     android.hardware.keymaster@3.0-impl
 
 # Gps
 PRODUCT_COPY_FILES += \
@@ -139,6 +140,12 @@ PRODUCT_PACKAGES += \
     libOMX.Exynos.VP8.Decoder \
     libOMX.Exynos.WMV.Decoder
 
+# Bluetooth HAL
+PRODUCT_PACKAGES += \
+     android.hardware.bluetooth@1.0-impl \
+     libbt-vendor
+
+
 # PERMISSONS
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -175,21 +182,21 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl
 
+# Sensors wrapper
+ PRODUCT_PACKAGES += \
+     sensors.universal5260
+
 # RIL
 PRODUCT_PACKAGES += \
-    libril \
-    librilutils \
-    rild \
-    libxml2 \
-    libprotobuf-cpp-full \
-    libsecril-client \
-    libsecril-client-sap \
-    modemloader
-
-# Samsung Packages
-#PRODUCT_PACKAGES += \
-#    SamsungServiceMode \
-#    AdvancedDisplay
+     libril \
+     libreference-ril \
+     rild \
+     libxml2 \
+     libprotobuf-cpp-full \
+     modemloader \
+     android.hardware.radio@1.0 \
+     android.hardware.radio.deprecated@1.0 \
+     libsec-ril_shim
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -221,6 +228,7 @@ PRODUCT_PACKAGES += \
     wificond \
     wpa_supplicant
 
-# external/wpa_supplicant_8/wpa_supplicant/wpa_supplicant_conf.mk
-PRODUCT_PACKAGES += \
-    wpa_supplicant.conf
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
