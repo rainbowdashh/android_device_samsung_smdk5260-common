@@ -45,7 +45,11 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.universal5260
+    camera.universal5260 \
+    camera.device@1.0-impl.exynos5260 \
+    android.hardware.camera.provider@2.4-impl.exynos5260 \
+    libshim_camera \
+    libhwjpeg
 
 # MobiCore setup
 PRODUCT_PACKAGES += \
@@ -68,16 +72,15 @@ PRODUCT_PACKAGES += \
 
 # GPU
 PRODUCT_PACKAGES += \
-    gralloc.exynos5 \
     libion \
     hwcomposer.exynos5 \
     memtrack.exynos5 \
     libstlport \
+    gralloc.exynos5 \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.mapper@2.0-impl \
-    android.hardware.memtrack@1.0-impl \
-    android.hardware.graphics.composer@2.1-impl
-
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.memtrack@1.0-impl
 
 # Keymaster
  PRODUCT_PACKAGES += \
@@ -88,8 +91,7 @@ PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/configs/gps/gps.xml:system/etc/gps.xml
 
 PRODUCT_PACKAGES += \
-     android.hardware.gnss@1.0-impl
-
+   android.hardware.gnss@1.1-impl
 # Init scripts
 PRODUCT_PACKAGES += \
     init.exynos.cam.sh
@@ -226,12 +228,14 @@ PRODUCT_PACKAGES += \
 
 ## WiFi
 PRODUCT_PACKAGES += \
-    macloader \
-    hostapd \
-    libwpa_client \
     android.hardware.wifi@1.0-service \
+    hostapd \
+    hostapd_default.conf \
+    libwpa_client \
     wificond \
-    wpa_supplicant
+    wpa_supplicant  \
+    libnetcmdiface \
+    wifiloader
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
