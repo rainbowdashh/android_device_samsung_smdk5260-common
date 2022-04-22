@@ -145,6 +145,11 @@ PRODUCT_PACKAGES += \
      android.hardware.bluetooth@1.0-impl \
      libbt-vendor
 
+# IR
+ PRODUCT_PACKAGES += \
+     android.hardware.ir@1.0-impl \
+     consumerir.universal5260
+
 
 # PERMISSONS
 PRODUCT_COPY_FILES += \
