@@ -94,7 +94,7 @@ BOARD_USES_HWC_SERVICES := true
 BOARD_USES_OLD_HDMI := true
 
 # Include path
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/smdk5260-common/include
+TARGET_SPECIFIC_HEADER_PATH += device/samsung/smdk5260-common/include
 
 # Kernel
 BOARD_KERNEL_CMDLINE := 
