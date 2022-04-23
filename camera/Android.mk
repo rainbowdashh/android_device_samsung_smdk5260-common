@@ -84,6 +84,11 @@ LOCAL_SHARED_LIBRARIES := \
     libutils \
     android.hidl.token@1.0-utils
 
+LOCAL_STATIC_LIBRARIES := \
+    libarect \
+    libbase \
+    libminui
+
 LOCAL_CFLAGS += -DGAIA_FW_BETA
 
 ifneq ($(BOARD_CAMERA_FRONT_ROTATION),)
