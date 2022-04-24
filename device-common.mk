@@ -48,13 +48,6 @@ PRODUCT_PACKAGES += \
     camera.universal5260 \
     libhwjpeg
 
-# MobiCore setup
-PRODUCT_PACKAGES += \
-    libMcClient \
-    libMcRegistry \
-    libPaApi \
-    libgdmcprov
-
 # Charger
 PRODUCT_PACKAGES += \
     charger \
@@ -106,10 +99,6 @@ PRODUCT_PACKAGES += \
     lights.universal5260 \
     android.hardware.light@2.0-impl
 
-# Mobicore
-PRODUCT_PACKAGES += \
-    mcDriverDaemon
-
 ## OMX
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs.xml:system/etc/media_codecs.xml \
@@ -129,6 +118,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
      android.hardware.bluetooth@1.0-impl \
      libbt-vendor
+
+# MobiCore setup
+PRODUCT_PACKAGES += \
+    libMcClient \
+    libMcRegistry \
+    libPaApi \
+    libgdmcprov
 
 # IR
  PRODUCT_PACKAGES += \
