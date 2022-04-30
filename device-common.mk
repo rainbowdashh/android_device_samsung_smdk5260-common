@@ -109,9 +109,23 @@ PRODUCT_COPY_FILES += \
 
 # Audio codecs
 PRODUCT_PACKAGES += \
-    libcsc \
-    libOMX.Exynos.WMV.Decoder \
-    libOMX.Exynos.MPEG2.Decoder
+    libOMX.Exynos.AAC.Decoder \
+    libOMX.Exynos.MP3.Decoder \
+    libOMX.Exynos.WMA.Encoder \
+    libOMX.Exynos.VP8.Encoder
+
+# Stagefright and device specific modules
+PRODUCT_PACKAGES += \
+    libstagefrighthw \
+    libExynosOMX_Core
+
+# Video codecs
+PRODUCT_PACKAGES += \
+    libOMX.Exynos.AVC.Decoder \
+    libOMX.Exynos.MPEG4.Decoder \
+    libOMX.Exynos.MPEG4.Encoder \
+    libOMX.Exynos.VP8.Decoder \
+    libOMX.Exynos.WMV.Decoder
 
 # Bluetooth HAL
 PRODUCT_PACKAGES += \
