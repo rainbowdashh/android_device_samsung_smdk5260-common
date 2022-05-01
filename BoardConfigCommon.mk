@@ -16,7 +16,6 @@ TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_CUSTOM_BT_CONFIG := device/samsung/smdk5260-common/bluetooth/libbt_vndcfg.txt
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/smdk5260-common/bluetooth
 
 # Board
 TARGET_BOOTLOADER_BOARD_NAME := universal5260
@@ -31,10 +30,6 @@ TARGET_SCREEN_WIDTH := 720
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
-
-# Camera Shim
-TARGET_LD_SHIM_LIBS += \
-        /system/lib/libexynoscamera.so|libshim_camera.so
 
 # Camera
 BOARD_NEEDS_MEMORYHEAPION := true
