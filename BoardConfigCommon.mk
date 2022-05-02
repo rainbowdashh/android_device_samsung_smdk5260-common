@@ -135,8 +135,8 @@ BOARD_RECOVERY_SWIPE := true
 TARGET_RECOVERY_FSTAB := device/samsung/smdk5260-common/rootdir/etc/fstab.universal5260
 
 # SELinux
-#BOARD_SEPOLICY_DIRS := \
-#	device/samsung/smdk5260-common/sepolicy
+BOARD_SEPOLICY_DIRS := \
+	device/samsung/smdk5260-common/sepolicy
 
 # Samsung LSI OpenMAX
 BOARD_USE_SAMSUNG_COLORFORMAT_NV21 := true
