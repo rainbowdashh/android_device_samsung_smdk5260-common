@@ -80,12 +80,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/configs/gps/gps.xml:system/etc/gps.xml
 
+# GPS
+PRODUCT_PACKAGES += \
+    libdmitry
+
 PRODUCT_PACKAGES += \
    android.hardware.gnss@1.1-impl
-# Init scripts
-PRODUCT_PACKAGES += \
-    init.exynos.cam.sh
 
+
+# Init scripts
 PRODUCT_PACKAGES += \
     fstab.universal5260 \
     init.universal5260.usb.rc \
