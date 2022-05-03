@@ -5,6 +5,7 @@
 /dev/mali[0-9]*             u:object_r:gpu_device:s0
 /dev/seiren                 u:object_r:seiren_device:s0
 /dev/ttySAC0                u:object_r:hci_attach_dev:s0
+/dev/ttySAC3                u:object_r:bluetooth_device:s0
 /dev/s5p-smem               u:object_r:secmem_device:s0
 /dev/mobicore               u:object_r:tee_device:s0
 /dev/mobicore-user          u:object_r:tee_device:s0

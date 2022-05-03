@@ -119,6 +119,7 @@ PRODUCT_PACKAGES += \
 
 # Stagefright and device specific modules
 PRODUCT_PACKAGES += \
+    libsamsung_symbols \
     libstagefrighthw \
     libExynosOMX_Core
 
