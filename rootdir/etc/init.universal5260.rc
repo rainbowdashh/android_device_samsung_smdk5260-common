@@ -40,15 +40,6 @@ on post-fs-data
     # Multimedia property for Smart View
     setprop media.enable-commonsource true
 
-# Permissions for bluetooth
-    setprop ro.bt.bdaddr_path "/efs/bluetooth/bt_addr"
-    chown bluetooth bluetooth ro.bt.bdaddr_path
-    chown bluetooth bluetooth /dev/ttySAC3
-    chmod 0600 /dev/ttySAC3
-    chmod 0660 /sys/class/rfkill/rfkill0/state
-    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
-    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
-
     # For kernel lock in BT/WiFi race condtion
     chmod 0600 /dev/btlock
     chown bluetooth bluetooth /dev/btlock
@@ -57,6 +48,15 @@ on post-fs-data
     mkdir /data/ymc 0775 system system
 
 on boot
+
+# Permissions for bluetooth
+    setprop ro.bt.bdaddr_path "/efs/bluetooth/bt_addr"
+    chown bluetooth ro.bt.bdaddr_path
+    chown bluetooth /dev/ttySAC3
+    chmod 0660 /dev/ttySAC3
+    chmod 0660 /sys/class/rfkill/rfkill0/state
+    chown bluetooth /sys/class/rfkill/rfkill0/state
+    chown bluetooth /sys/class/rfkill/rfkill0/type
 
 # cmdline 
     chmod 0644 /proc/cmdline
