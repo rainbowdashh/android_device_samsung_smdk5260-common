@@ -28,11 +28,6 @@ on post-fs-data
 
     setprop vold.post_fs_data_done 1
 
-    service loggy /system/bin/sh  /loggy.sh
-        class main
-        user root
-        oneshot
-
     # Added for TZ Playready DRM Support
     mkdir /efs/drm 0774 drm system
     mkdir /efs/drm/playready 0775 drm system
