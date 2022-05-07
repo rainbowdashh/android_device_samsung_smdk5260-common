@@ -63,6 +63,7 @@ PRODUCT_PACKAGES += \
 # GPU
 PRODUCT_PACKAGES += \
     libion \
+    mali_shim \
     hwcomposer.exynos5 \
     memtrack.exynos5 \
     libstlport \
