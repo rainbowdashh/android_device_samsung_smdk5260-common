@@ -46,7 +46,8 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.universal5260 \
-    libhwjpeg
+    libhwjpeg \
+    Snap \
 
 # Charger
 PRODUCT_PACKAGES += \
