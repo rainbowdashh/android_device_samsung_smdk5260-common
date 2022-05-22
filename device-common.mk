@@ -92,6 +92,7 @@ PRODUCT_PACKAGES += \
 
 # Init scripts
 PRODUCT_PACKAGES += \
+    init.exynos.cam.sh \
     fstab.universal5260 \
     init.universal5260.usb.rc \
     init.universal5260.rc \
