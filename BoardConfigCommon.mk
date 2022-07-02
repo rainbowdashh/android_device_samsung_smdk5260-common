@@ -112,7 +112,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
-#BOARD_RECOVERYIMAGE_PARTITION_SIZE := 8388608
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 8388608
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2401239040
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12629049344
 BOARD_CACHEIMAGE_PARTITION_SIZE := 209715200
@@ -133,8 +133,8 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/exynos-dwc3.0/exynos-s
 BOARD_USES_MMCUTILS := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 BOARD_RECOVERY_SWIPE := true
-TARGET_RECOVERY_FSTAB := device/samsung/smdk5260-common/rootdir/etc/fstab.universal5260
-
+PRODUCT_COPY_FILES += \
+    device/samsung/smdk5260-common/twrp/twrp.fstab:recovery/root/etc/twrp.fstab
 # SELinux
 BOARD_SEPOLICY_DIRS := \
 	device/samsung/smdk5260-common/sepolicy
@@ -184,3 +184,34 @@ WPA_SUPPLICANT_VERSION           := VER_0_8_X
 WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/dhd/parameters/firmware_path"
 WIFI_DRIVER_FW_PATH_STA          := "/system/etc/wifi/bcmdhd_sta.bin"
 WIFI_DRIVER_FW_PATH_AP           := "/system/etc/wifi/bcmdhd_apsta.bin"
+
+# TWRP Specific
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+RECOVERY_SDCARD_ON_DATA := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+TW_NO_USB_STORAGE := true
+TW_DEFAULT_EXTERNAL_STORAGE := true
+TW_HAS_DOWNLOAD_MODE := true
+TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
+TW_MAX_BRIGHTNESS := 255
+TW_NO_REBOOT_BOOTLOADER := true
+TW_EXCLUDE_SUPERSU := true
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/exynos-dwc3.0/exynos-ss-udc.0/gadget/lun0/file"
+BOARD_HAS_NO_MISC_PARTITION := true
+BOARD_SUPPRESS_SECURE_ERASE := true
+BOARD_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
+TW_THEME := portrait_hdpi
+# TARGET_RECOVERY_DENSITY := mdpi
+TW_MTP_DEVICE := "/dev/mtp_usb"
+TW_INCLUDE_CRYPTO := true
+# TW_NO_LEGACY_PROPS := true
+TW_EXCLUDE_TZDATA := true
+TW_EXCLUDE_NANO := true
+# TW_EXCLUDE_BASH := true
+RECOVERY_VARIANT := twrp
+LZMA_RAMDISK_TARGETS := boot,recovery
+# TWRP_INCLUDE_LOGCAT := true
+TARGET_RECOVERY_DEVICE_DIRS += device/samsung/smdk5260-common
+# TARGET_RECOVERY_FSTAB := device/samsung/smdk5260-common/rootdir/etc/fstab.universal5260
+TW_EXCLUDE_PYTHON := true
+
