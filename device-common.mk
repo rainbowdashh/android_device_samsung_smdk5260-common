@@ -63,17 +63,17 @@ PRODUCT_PACKAGES += \
 
 # GPU
 PRODUCT_PACKAGES += \
-    libion \
     mali_shim \
-    hwcomposer.exynos5 \
-    memtrack.exynos5 \
-    libstlport \
-    gralloc.exynos5 \
     android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.mapper@2.0-impl \
-    android.hardware.graphics.composer@2.1-impl \
-    android.hardware.memtrack@1.0-impl
-
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.renderscript@1.0-impl \
+    gralloc.exynos5 \
+    libhwc2on1adapter \
+    libion \
+    libfimg \
+    libgutils
 # Keymaster
  PRODUCT_PACKAGES += \
      android.hardware.keymaster@3.0-impl
