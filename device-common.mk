@@ -104,9 +104,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.universal5260 \
-    android.hardware.light@2.0-impl
-
+    android.hardware.light@2.0-service.samsung
 ## OMX
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
@@ -189,6 +187,10 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl
+
+# Touch features
+ PRODUCT_PACKAGES += \
+     vendor.lineage.touch@1.0-service.samsung
 
 # Sensors wrapper
  PRODUCT_PACKAGES += \
