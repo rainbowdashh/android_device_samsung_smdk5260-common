@@ -53,7 +53,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.universal5260 \
     libhwjpeg \
-    Snap \
+    android.hardware.camera.provider@2.4-impl.exynos5260 \
+    camera.device@1.0-impl.exynos5260
 
 # Charger
 PRODUCT_PACKAGES += \
