@@ -179,10 +179,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.nxp.mifare.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/handheld_core_hardware.xml
 
-# PowerHAL
-PRODUCT_PACKAGES += \
-    power.universal5260 \
-    android.hardware.power@1.0-impl
+# Power
+ PRODUCT_PACKAGES += \
+     android.hardware.power@1.0-service.exynos
 
 # Sensors
 PRODUCT_PACKAGES += \
