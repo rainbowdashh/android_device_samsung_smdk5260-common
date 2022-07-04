@@ -8,8 +8,8 @@ $(call inherit-product-if-exists, vendor/samsung/smdk5260-common/smdk5260-common
 $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # call Samsung LSI board support package
-$(call inherit-product, hardware/samsung_slsi-cm/exynos5/exynos5.mk)
-$(call inherit-product, hardware/samsung_slsi-cm/exynos5260/exynos5260.mk)
+$(call inherit-product, hardware/samsung_slsi/exynos5/exynos5.mk)
+$(call inherit-product, hardware/samsung_slsi/exynos5260/exynos5260.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/smdk5260-common/overlay
