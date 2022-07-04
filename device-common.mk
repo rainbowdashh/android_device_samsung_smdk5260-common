@@ -79,7 +79,12 @@ PRODUCT_PACKAGES += \
     libhwc2on1adapter \
     libion \
     libfimg \
-    libgutils
+
+# Health
+ PRODUCT_PACKAGES += \
+     android.hardware.health@2.0-impl \
+     android.hardware.health@2.0-service
+
 
 # Keymaster
  PRODUCT_PACKAGES += \
