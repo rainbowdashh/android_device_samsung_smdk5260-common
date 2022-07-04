@@ -113,38 +113,22 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml  \
 
-# Audio codecs
-PRODUCT_PACKAGES += \
-    libOMX.Exynos.AAC.Decoder \
-    libOMX.Exynos.MP3.Decoder \
-    libOMX.Exynos.WMA.Encoder \
-    libOMX.Exynos.VP8.Encoder
+# MobiCore setup
+ PRODUCT_PACKAGES += \
+     mcDriverDaemon \
+     libMcClient \
+     libMcRegistry
 
 # Stagefright and device specific modules
 PRODUCT_PACKAGES += \
-    libsamsung_symbols \
-    libstagefrighthw \
-    libExynosOMX_Core
+    libsamsung_symbols
 
-# Video codecs
-PRODUCT_PACKAGES += \
-    libOMX.Exynos.AVC.Decoder \
-    libOMX.Exynos.MPEG4.Decoder \
-    libOMX.Exynos.MPEG4.Encoder \
-    libOMX.Exynos.VP8.Decoder \
-    libOMX.Exynos.WMV.Decoder
 
 # Bluetooth HAL
 PRODUCT_PACKAGES += \
      android.hardware.bluetooth@1.0-impl \
      libbt-vendor
 
-# MobiCore setup
-PRODUCT_PACKAGES += \
-    libMcClient \
-    libMcRegistry \
-    libPaApi \
-    libgdmcprov
 
 # IR
  PRODUCT_PACKAGES += \
@@ -242,13 +226,9 @@ PRODUCT_PACKAGES += \
 ## WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
-    android.hardware.wifi@1.0 \
-    android.hardware.wifi@1.0-impl \
     hostapd \
-    hostapd_default.conf \
     libwpa_client \
     wificond \
-    libnetcmdiface \
     wifiloader \
     wifilogd \
     wlutil \
