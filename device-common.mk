@@ -17,6 +17,12 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/smdk5260-common/overlay
 # seloonix hax
 SELINUX_IGNORE_NEVERALLOWS := true
 
+# First Stage Mount
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.universal5260:$(TARGET_COPY_OUT_RAMDISK)/fstab.universal5260 \
+    $(LOCAL_PATH)/rootdir/etc/fstab.universal5260:$(TARGET_COPY_OUT_VENDOR)/fstab.universal5260
+
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
