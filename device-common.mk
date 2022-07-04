@@ -171,7 +171,9 @@ PRODUCT_COPY_FILES += \
 
 # Power
  PRODUCT_PACKAGES += \
-     android.hardware.power@1.0-service.exynos
+    power.universal5420 \
+    android.hardware.power@1.0-service \
+    android.hardware.power@1.0-impl
 
 # Sensors
 PRODUCT_PACKAGES += \
