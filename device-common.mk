@@ -98,9 +98,7 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    libdmitry
-
-PRODUCT_PACKAGES += \
+    libdmitry \
    android.hardware.gnss@1.1-impl
 
 
