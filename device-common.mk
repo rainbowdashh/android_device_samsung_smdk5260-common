@@ -176,7 +176,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
  PRODUCT_PACKAGES += \
-    power.universal5420 \
+    power.universal5260 \
     android.hardware.power@1.0-service \
     android.hardware.power@1.0-impl
 
