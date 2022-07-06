@@ -109,6 +109,7 @@ PRODUCT_PACKAGES += \
     init.universal5260.usb.rc \
     init.universal5260.rc \
     init.wifi.rc \
+    loggy.sh \
     ueventd.universal5260.rc
 
 # Lights
