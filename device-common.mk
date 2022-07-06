@@ -17,6 +17,13 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/smdk5260-common/overlay
 # seloonix hax
 SELINUX_IGNORE_NEVERALLOWS := true
 
+# Legacy blobs
+
+TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
+TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
+    /system/bin/audioserver=22 \
+    /system/vendor/bin/hw/rild=22
+
 # First Stage Mount
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.universal5260:$(TARGET_COPY_OUT_RAMDISK)/fstab.universal5260 \
