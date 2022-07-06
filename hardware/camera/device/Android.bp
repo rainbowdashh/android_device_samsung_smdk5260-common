@@ -33,7 +33,7 @@ cc_library_shared {
         "frameworks/native/include/media/openmax",
         "frameworks/native/libs/binder/include",
         "system/core/libion/include",
-        "device/samsung/smdk5260-common/hidl/camera/device/include"
+        "device/samsung/smdk5260-common/hardware/camera/device/include"
     ],
     export_include_dirs: ["."],
     header_libs: [

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "CamDev@1.0-impl.exynos5260"
+#define LOG_TAG "CamDev@1.0-impl.exynos5420"
 #define USE_MEMORY_HEAP_ION
 
 #include <hardware/camera.h>

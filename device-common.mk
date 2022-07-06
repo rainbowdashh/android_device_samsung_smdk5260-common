@@ -40,8 +40,8 @@ ANDROID_COMPILE_WITH_JACK := false
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
-    $(LOCAL_PATH)/configs/audio/ysound.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ysound.xml
+    $(LOCAL_PATH)/configs/audio/audio_effects.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_effects.conf \
+    $(LOCAL_PATH)/configs/audio/ysound.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/ysound.xml
 
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -63,6 +63,7 @@ PRODUCT_PACKAGES += \
     libexynoscamera \
     libhwjpeg \
     android.hardware.camera.provider@2.4-impl.exynos5260 \
+    android.hardware.camera.provider@2.4-service \
     camera.device@1.0-impl.exynos5260
 
 # Charger
@@ -197,7 +198,7 @@ PRODUCT_PACKAGES += \
     sensors.exynos5
 
 PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/sensors/_hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/_hals.conf
+     $(LOCAL_PATH)/hardware/sensors/_hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/_hals.conf
 
 
 # Touch features
@@ -207,10 +208,6 @@ PRODUCT_COPY_FILES += \
 # Trust HAL
  PRODUCT_PACKAGES += \
      vendor.lineage.trust@1.0-service
-
-# Sensors wrapper
- PRODUCT_PACKAGES += \
-     sensors.universal5260
 
 # RIL
 PRODUCT_PACKAGES += \
