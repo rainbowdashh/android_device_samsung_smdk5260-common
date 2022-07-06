@@ -53,6 +53,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.universal5260 \
     libshim_camera \
+    libexynoscamera \
     libhwjpeg \
     android.hardware.camera.provider@2.4-impl.exynos5260 \
     camera.device@1.0-impl.exynos5260
