@@ -3,8 +3,10 @@ import init.wifi.rc
 import init.target.rc
 
 on init
-#    export LD_SHIM_LIBS /system/bin/gpsd|libdmitry.so
 
+    symlink /sdcard /storage/sdcard0
+    symlink /sdcard1 /storage/sdcard1
+    symlink /dev/block/mmcblk0p13 /dev/mbin0
     mkdir /efs 0771 radio system
     mkdir /preload 0771 system system
 
